@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+      <!-- HEAD SECTION-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- MAIN STYLE SECTION-->
+    <link href="assets/plugins/isotope/isotope.css" rel="stylesheet" media="screen" />
+    <link href="assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/plugins/IconHoverEffects-master/css/component.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/about-achivements.css" rel="stylesheet" />
+    <link id="mainStyle" href="assets/css/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <!-- END MAIN STYLE SECTION-->
+</head>
+<!-- END HEAD SECTION-->
+
+     <!-- BODY SECTION-->
+<body>
+
+     <!-- HEADER SECTION-->
+    <div class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="fa fa-bars mobile-bars"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="index.html">Home</a></li><!-- menu links-->
+                    <li><a href="perusasiat.html">Perusasiat</a></li>
+                    <li><a href="rakenteita.html">Lisää rakenteita</a></li>
+                    <li><a href="funktiot.html">Funktiot</a></li>
+                    <li><a href="kohtipelia.html">Kohti peliä</a></li>
+                    <li><a href="pygame.html">Peliohjelmoinnin alkeet</a></li>
+                    <li><a href="vihollispeli.html">Vihollispeli</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+     <!-- END HEADER SECTION-->
+
+    <!--PAGE CONTENT-->
+    <!-- HOMEPAGE SECTION-->
+
+    <section id="Homepage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <div class="align-center">
+                        <h2 class="main-text">FUNKTIOT</h2>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section style="margin-top:20px;">
+        <div class="container">
+            <div class="row">
+              <div class="">
+                  <h2> Funktiot </h2>
+
+		<p>Olemme jo käyttäneet monia erilaisia komentoja: sijoitusta, laskutoimituksia, vertailua, if:iä, for:ia ja whileä. Ruudulle tulostaminen on tehty "komentoa" <code>print</code> käyttäen. Listan pituus tunnistetaan "komennolla" <code>len</code>. Tuttuja ovat myös <code>input</code> ja <code>int</code>.</p>
+
+		<p>Huomaamme, että jälkimmäinen joukko edellä lueteltuja komentoja poikkeaa if:istä, for:ista, while:stä ym. siinä, että komennon perässä on sulut ja joskus sulkujen sisällä komennolle annettava tieto. "Sulkuihin päättyvät" eivät oikeastaan olekaan komentoja vaan <strong>funktioita</strong>.</p>
+
+		<p>Teknisesti ottaen funktio tarkoittaa koodinpätkää, jota voi kutsua muualta ohjelmakoodista. Koodirivi <code>print("olen metodi!")</code> siis tarkoittaa, että kutsutaan funktiota, joka suorittaa ruudulle tulostamisen. Funktion suorituksen jälkeen palataan siihen kohtaa missä ennen funktiokutsua oltiin menossa. Funktiolle suluissa annettua tietoa kutsutaan <i>funktion parametriksi</i>. </p>
+
+		<p>Parametrin lisäksi funktiolla voi olla <i>paluuarvo</i>. Esim. tuttu koodinpätkä:</p>
+
+<pre class="sh_python">
+syote = input("Kerro jotain: ")
+</pre>
+
+		<p>sisältää kutsun funktioon <code>input</code> jolle annetaan parametrina merkkijono joka käyttäjälle näytetään. Funktiolla on paluuarvona käyttäjän syöttämä merkkijono. Vastaavasti paljon käyttämämme kokonaisluvun lukeminen:</p>
+
+<pre class="sh_python">
+luku = int(input("Anna kokonaisluku: "))
+</pre>
+
+                 <p>sisältää kaksi funktiokutsua. Ensin kutsutaan funktiota <code>input</code>, jonka paluuarvona on merkkijono. Funktion <code>input</code> palauttama merkkijono annetaan heti parametrina funktiolle <code>int</code>, joka palauttaa parametrina annetun merkkijonon kokonaislukuna.
+
+		 <p>Funktiokutsuja voi siis ketjuttaa siten, että "sisemmästä" funktiokutsusta palautunut arvo annetaan "ulommalle" funktiokutsulle parametrina.</p>
+
+		 <p>Funktiokutsuja on oikeastaan kahdenlaisia. Osa liittyy muuttujiin siten, että muuttujan nimen jälkeen tulee piste ja sen jälkeen funktion nimi. Osa taas on erillisiä. Esimerkiksi listamuuttujilla on funktio <code>append</code>, jota käytetään yhdessä listamuuttujan kanssa <code>listamuuttuja.append(3)</code>.  Tämä yhdistäminen johtuu yksinkertaistaen siitä, että tiedettäisiin mihin listaan lisätään.</p>
+
+		 <p>Opimme hiukan myöhemmin tarkemmin mistä tässä pisteen vasemmanpuoleisessa osassa on kyse.</p>
+
+		 <p>Tähän mennessä käyttämämme metodit ovat kaikki olleet pythonin valmiita funktioita. Hetken kuluttua opimme tekemään myös omia funktioita. </p>
+
+     <h2 id="metodit">Omat funktiot</h2>
+
+		 <p>Olemme tähän mennessä ohjelmoineet ohjelmamme siten, että kaikki tapahtuu yhdessä jatkumossa ja koodia luetaan ylhäältä alas. </p>
+
+		 <p>Edellä puhuttiin jo funktioista, ja mainittiin että "funktio tarkoittaa koodinpätkää, jota voi kutsua muualta ohjelmakoodista". Pythonin valmiita funktioita on käytetty jo oikeastaan ensimmäisestä ohjelmasta lähtien.</p>
+
+		 <p>Valmiiden funktioiden käytön lisäksi ohjelmoija voi kirjoittaa itse funktioita joita sovellus kutsuu. Oikeastaan on hyvin poikkeuksellista jos ohjelmassa ei ole yhtään itse kirjoitettua funktiota. Tästälähtien lähes jokainen ohjelma sisältääkin itsekirjoitettuja funktioita.</p>
+
+		 <p>Kirjoitetaan tästä eteenpäin (kunnes toisin opitaan!) funktiot lähdekoodin yläosaan, ja funktioita itse käyttävä ohjelma funktioiden alapuolelle:</p>
+
+<pre class="sh_python">
+# ensin funktiomäärittelyt
+def hei():
+    print("No heipä hei!")
+    return
+
+# ja sitten ohjelma joka käyttää funktioita!
+print("No hei.")
+hei()
+</pre>
+
+                 <p>Ylläolevassa esimerkissä on luotu oma funktio nimeltä <code>hei</code>. Funktio määritellään komennolla <code>def</code> jonka jälkeen tulee funktion nimi, eli nimi jolla funktiota kutsutaan. Funktion nimen jälkeen tulee sulut ja kaksoispiste. Kaksoispisteen jälkeen alkaa lohko, jonka sisällä määritellään funktion toiminnallisuus.</p>
+
+		 <p>Ylläolevassa esimerkissä funktio päätetään komennolla <code>return</code>, joka voidaan vapaasti suomentaa joko <em>palaa</em> tai <em>palauta</em>. Tutustumme arvon palauttaviin funktioihin hieman myöhemmin.</p>
+
+		 <p>Kun ylläoleva esimerkki ajetaan, tulostuu seuraavanlainen teksti:</p>
+
+<pre>
+No hei.
+No heipä hei!
+</pre>
+
+                 <p>Lähdekoodin suoritus siis alkaa funktiomäärittelyiden jälkeen. Ensin tulee vastaan komento <code>print("No hei.")</code>, joka oikeasti kutsuu pythonin valmista tulostusfunktiota <code>print</code>. Kun rivi suoritetaan, tulostuu näytölle teksti "No hei.". Tämän jälkeen mennään seuraavalle riville, jossa on komento <code>hei()</code>. Python-tulkki näkee suluista että kyseessä on funktiokutsu ja etsii <code>hei</code>-nimisen funktion. Funktio <code>hei</code> suoritetaan, eli ajetaan komento <code>print("No heipä hei!")</code>, jota seuraa komento <code>return</code>. Komento <code>return</code> tarkoittaa tässä tapauksessa sitä, että palataan takaisin kohtaan josta funktiota kutsuttiin. Funktiokutsun <code>hei()</code> jälkeen ei ole muita komentoja, ja ohjelman suoritus päättyy.</p>
+
+		 <p>Itsekirjoitetun funktion kutsuminen on helppoa, kirjoitetaan funktion nimi ja perään sulut ja puolipiste. Seuraavassa esimerkissä kutsutaan funktiota <code>tervehdi</code> ensin kerran ja sen jälkeen useita kertoja. </p>
+
+<pre class="sh_python">
+# ensin funktiomäärittelyt
+def tervehdi():
+    print("Terveisiä funktiosta tervehdi!")
+    return
+
+# ja sitten ohjelma joka käyttää funktioita!
+print("Kokeillaan onnistuuko funktion kutsuminen:")
+tervehdi()
+
+print("Näyttää siltä, kokeillaan vielä:")
+tervehdi()
+tervehdi()
+tervehdi()
+</pre>
+
+		 <p>Ohjelman suoritus saa aikaan seuraavan tulosteen: </p>
+
+<pre>
+Kokeillaan onnistuuko funktion kutsuminen:
+Terveisiä funktiosta tervehdi!
+Näyttää siltä, kokeillaan vielä:
+Terveisiä funktiosta tervehdi!
+Terveisiä funktiosta tervehdi!
+Terveisiä funktiosta tervehdi!
+</pre>
+
+		 <p>Tässä siis huomionarvoista on, että koodin suoritus etenee siten, että pääohjelman rivit suoritetaan ylhäältä alas yksi kerrallaan. Koodirivin ollessa funktiokutsu, mennään suorittamaan funktion koodirivit jonka jälkeen palataan siihen kohtaan josta kutsu tapahtui, tai tarkemmin ottaen funktiokutsun jälkeiseen kohtaan.</p>
+
+		<p>Jatkossa kun esittelemme funktioita, emme erikseen mainitse että niiden täytyy sijaita omalla paikallaan.  Funktioita ei esimerkiksi voi määritellä toisen funktion sisällä.</p>
+
+    <h2>Tehtävä 30: Tekstin tulostus funktiosta</h2>
+
+    <p>Tee funktio <code>tulostaTeksti</code>, joka tulostaa
+    tekstin "Alussa olivat suo, kuokka ja python." </p>
+
+    <p>Ohjelman tulostus:</p>
+
+<pre>
+Alussa olivat suo, kuokka ja python.
+</pre>
+
+    <h2>Tehtävä 31: Monta tulostusta</h2>
+
+    <p>Laajenna edellistä ohjelmaasi siten,
+    että pääohjelma kysyy käyttäjältä, montako kertaa
+    teksti tulostetaan eli montako kertaa metodia kutsutaan.</p>
+
+    <p>Ohjelman tulostus:</p>
+
+<pre>
+Kuinka monta kertaa tulostetaan? <font color="red">7</font>
+Alussa olivat suo, kuokka ja python.
+Alussa olivat suo, kuokka ja python.
+Alussa olivat suo, kuokka ja python.
+Alussa olivat suo, kuokka ja python.
+Alussa olivat suo, kuokka ja python.
+Alussa olivat suo, kuokka ja python.
+Alussa olivat suo, kuokka ja python.
+</pre>
+
+<h2>Funktion parametrit</h2>
+
+		<p>Funktiosta saa huomattavasti monikäyttöisemmän antamalla sille parametreja. Parametrit ovat muuttujia, jotka määritellään funktion ylimmällä rivillä funktion nimen jälkeen olevien sulkujen sisällä.  Kun funktiota kutsutaan, sen parametreille annetaan arvot kutsuvaiheessa.</p>
+
+		<p>Seuraavassa esimerkissä määritellään parametrillinen funktio <code>tervehdi</code>, jolla on tekstityyppinen parametri <code>nimi</code></p>
+
+<pre class="sh_python">
+def tervehdi(nimi):
+  print("Hei " + nimi + ", terveiset funktiosta!")
+</pre>
+		 <p>Kutsutaan funktiota <code>tervehdi</code> siten, että parametrin <code>nimi</code> arvoksi asetetaan ensimmäisellä kutsulla <code>Matti</code> ja toisella kutsulla <code>Arto</code>.</p>
+
+<pre class="sh_python">
+# ensin funktiomäärittelyt
+def tervehdi(nimi):
+  print("Hei " + nimi + ", terveiset funktiosta!")
+
+# sitten ohjelman toiminnallisuus
+tervehdi("Matti")
+tervehdi("Arto")
+</pre>
+
+<pre>
+Hei Matti, terveiset funktiosta!
+Hei Arto, terveiset funktiosta!
+</pre>
+
+		 <p>Aivan kuten kutsuttaessa pythonin valmista <code>print</code>-metodia, voi oman metodin kutsussa parametrina käyttää monimutkaisempaa ilmausta: </p>
+
+<pre class="sh_python">
+nimi1 = "Pihla"
+nimi2 = "Toivanen"
+tervehdi( nimi1 + " " + nimi2 )
+ika = 24
+tervehdi("Juhana " + str(ika) + " vuotta")
+</pre>
+
+<pre>
+Hei Pihla Toivanen, terveiset funktiosta!
+Hei Juhana 24 vuotta, terveiset funktiosta!
+</pre>
+
+		 <p>Molemmissa tapauksissa funktiolla on edelleen vain 1 parametri. Parametrin arvo lasketaan ennen funktion kutsumista. Ensimmäisessä tapauksessa parametrin arvo saadaan merkkijonokatenaationa <code>nimi1 + " " + nimi2</code> joka siis on arvoltaan <i>Antti Mikkola</i> ja jälkimmäisessä tapauksessa merkkijonokatenaatiosta <code>"Juhana " + str(ika) + " vuotta"</code>.  </p>
+
+		 <h3>Lista parametrina</h3>
+
+		 <p>Listan käyttö parametrina onnistuu ilman ongelmia:</p>
+
+<pre class="sh_python">
+def tulostaAlkiot(lista):
+  for alkio in lista:
+    print(alkio)
+
+luvut = [1, 2, 3, 4, 5]
+tulostaAlkiot(luvut)
+</pre>
+
+<pre>
+1
+2
+3
+4
+5
+</pre>
+
+
+		 <p>Huomaa että parametrin nimi funktion sisällä voi olla aivan vapaasti valittu, nimen ei tarvitse missään tapauksessa olla sama kuin kutsuvassa ohjelmassa. Edellä listaa kutsutaan metodin sisällä nimellä <code>lista</code>, metodin kutsuja taas näkee saman listan <code>luvut</code>-nimisenä.</p>
+
+		 <h3>Monta parametria</h3>
+
+		 <p>Funktiolla voidaan määritellä useampia parametreja.  Tällöin metodin kutsussa parametrit annetaan samassa järjestyksessä.</p>
+
+<pre class="sh_python">
+def tervehdi(nimi, mistaTerveiset):
+  print("Hei " + nimi + ", terveiset " + mistaTerveiset)
+</pre>
+
+<pre class="sh_python">
+kuka = "Matti"
+terveiset = "Kyröjoelta"
+
+tervehdi(kuka, terveiset)
+tervehdi(kuka, terveiset + " ja Kumpulasta")
+</pre>
+
+		 <p>Jälkimmäisessä <code>tervehdi</code>-funktion kutsussa toinen parametri muodostetaan katenoimalla muuttujaan <code>terveiset</code> teksti <code>" ja Kumpulasta"</code>.  Tämä suoritetaan ennen varsinaista funktion suoritusta.</p>
+
+<pre>
+Hei Matti, terveiset Kyröjoelta
+Hei Matti, terveiset Kyröjoelta ja Kumpulasta
+</pre>
+
+                 <h3>Funktio kutsuu toista funktiota</h3>
+
+		 <p>Pääohjelmamme, eli tässä vaiheessa alhaalla oleva koodi, ei suinkaan ole ainoa joka voi kutsua funktioita.  Funktiot voivat kutsua myös toisiaan. Tehdään funktio <code>tervehdiMontaKertaa</code>, joka tervehtii käyttäjää useasti funktion <code>tervehdi</code> avulla:</p>
+
+<pre class="sh_python">
+def tervehdi(nimi):
+  print("Hei " + nimi + ", terveiset funktiosta!")
+
+def tervehdiMontaKertaa(nimi, kerrat):
+  for i in range(kerrat):
+    tervehdi(nimi)
+
+tervehdiMontaKertaa("Antti", 3)
+print("ja")
+tervehdiMontaKertaa("Martin", 2)
+</pre>
+
+<p>Tulostuu:</p>
+
+<pre>
+Hei Antti, terveiset funktiosta!
+Hei Antti, terveiset funktiosta!
+Hei Antti, terveiset funktiosta!
+ja
+Hei Martin, terveiset funktiosta!
+Hei Martin, terveiset funktiosta!
+</pre>
+
+<h2>Tehtävä 32: Tähtien tulostus</h2>
+
+<p>Tee funktio <code>tulostaTahtia</code>,
+joka tulostaa annetun määrän tähtiä</p>
+
+<pre class="sh_python">
+tulostaTahtia(5)
+tulostaTahtia(3)
+tulostaTahtia(9)
+</pre>
+
+<p>Ohjelman tulostus:</p>
+
+<pre>
+*****
+***
+*********
+</pre>
+
+<h2>Tehtävä 33: Viestin tulostus</h2>
+
+<p>Tee funktio <code>tulostaViesti</code>, joka tulostaa
+annetun viestin tähdillä reunustettuna.
+Käytä funktiossa apuna funktiota <code>tulostaTahtia</code>.</p>
+
+<p>Tee ohjelma seuraavaan runkoon:</p>
+
+<pre class="sh_python">
+tulostaViesti("Tervetuloa!");
+tulostaViesti("ABC");
+tulostaViesti("Hei hei!");
+</pre>
+
+<p>Ohjelman tulostus:</p>
+
+<pre>
+***************
+* Tervetuloa! *
+***************
+*******
+* ABC *
+*******
+************
+* Hei hei! *
+************
+</pre>
+
+<h2>Tehtävä 34: Viestien tulostus</h2>
+
+<p>Tee funktio <code>tulostaViestit</code>,
+joka tulostaa listassa annetut viestit tähdillä reunustettuina.
+Käytä funktiossa apuna funktiota <code>tulostaViesti</code>.</p>
+
+<pre class="sh_python">
+lista = ["Tervetuloa", "ABC", "Hei hei!"];
+tulostaViestit(taulukko);
+</pre>
+
+<p>Ohjelman tulostus:</p>
+
+<pre>
+***************
+* Tervetuloa! *
+***************
+*******
+* ABC *
+*******
+************
+* Hei hei! *
+************
+</pre>
+
+<h2>Tehtävä 35: Merkkien tulostus</h2>
+
+<p>Tee funktio <code>tulostaMerkkeja</code>,
+joka tulostaa annetun määrän annettuja merkkejä.</p>
+
+<pre class="sh_python">
+tulostaMerkkeja(5, 'A');
+tulostaMerkkeja(3, 'B');
+tulostaMerkkeja(9, 'C');
+</pre>
+
+<p>Ohjelman tulostus:</p>
+
+<pre>
+AAAAA
+BBB
+CCCCCCCCC
+</pre>
+
+<h2>Funktiot ja muuttujien näkyvyys</h2>
+
+<p>Yritetään muuttaa funktion sisältä pääohjelman muuttujan arvoa.</p>
+
+<pre class="sh_python">
+def kasvataKolmella():
+ x = x + 3
+
+x = 1
+kasvataKolmella()
+
+print(x)
+</pre>
+
+    <p>Ohjelma ei kuitenkaan toimi, sillä funktio ei näe muuttujaa <code>x</code>.</p>
+
+    <p>Yleisemminkin voi todeta, että pääohjelman muuttujat eivät suoraan näy muuttujat eivät näy funktioiden sisään, ja funktioiden muuttujat eivät näy muille funktioille tai pääohjelmalle. Yleisesti käytetty keino tiedon viemiseen funktioon on funktiolle annettavan parametrin käyttö.</p>
+
+    <p>Python mahdollistaa funktioiden määrittelyn siten, että ne näkevät funktioiden ulkopuolella määritellyt muuttujat avainsanan <code>global</code> avulla. Seuraavassa yllä esitetty esimerkki uudestaan, tällä kertaa globaalia muuttujaa käyttäen.</p>
+
+<pre class="sh_python">
+def kasvataKolmella():
+ global x
+ x = x + 3
+
+x = 1
+kasvataKolmella()
+
+print(x)
+</pre>
+
+<pre>
+4
+</pre>
+
+                <p>Globaalien muuttujien käyttöä ohjelmissa kannattaa kuitenkin välttää, ja tyytyä tässä vaiheessa palauttamaan yksi arvo funktiota kohti.</p>
+
+                <h3>Funktioiden paluuarvot</h3>
+
+    <p>Funktio voi myös palauttaa arvon.  Edellä olevissa esimerkeissä funktiot eivät palauttaneet mitään arvoa. Tämä on merkitty joko jättämällä <code>return</code>-lause pois funktiomäärittelystä, tai jättämällä <code>return</code> omalle rivilleen.</p>
+
+<pre class="sh_python">
+def tervehdi():
+ print("Heippa vaan!")
+ return
+</pre>
+
+    <p>Arvon palauttavaa funktiota määriteltäessä annetaan funktiossa olevalle <code>return</code>-komennolle palautettava muuttuja. Seuraavassa funktio joka palauttaa aina luvun 10.<p>
+
+<pre class="sh_python">
+def palautetaanAinaKymppi():
+ return 10
+</pre>
+
+<p>Jotta funktion kutsuja voisi käyttää paluuarvoa, tulee paluuarvo ottaa talteen muuttujaan:</p>
+
+<pre class="sh_python">
+luku = palautetaanAinaKymppi()
+
+print("metodi palautti luvun " + str(luku))
+</pre>
+
+    <p>Funktion paluuarvo siis sijoitetaan muuttujaan aivan kuin mikä tahansa muukin arvo. Paluuarvo voi toimia myös osana mitä tahansa lauseketta: </p>
+
+<pre class="sh_python">
+luku = 4 * palautetaanAinaKymppi() + palautetaanAinaKymppi() / 2 - 8
+
+print("laskutoimituksen tulos " + str(luku))
+</pre>
+
+   <p>Seuraavassa esimerkissä määritellään funktio summan laskemiseen.  Tämän jälkeen funktiota käytetään laskemaan luvut 2 ja 7 yhteen, funktiokutsusta saatava paluuarvo asetetaan muuttujaan <code>lukujenSumma</code>.</p>
+
+<pre class="sh_python">
+def summa(eka, toka):
+ return eka + toka
+
+lukujenSumma = summa(2, 7);
+print("Lukujen 2 ja 7 summa on " + str(lukujenSumma))
+</pre>
+
+   <p>Laajennetaan edellistä esimerkkiä siten, että käyttäjä syöttää luvut.</p>
+
+<pre class="sh_python">
+def summa(eka, toka):
+ return eka + toka
+
+
+eka = int(input("Anna ensimmäinen luku: "))
+toka = int(input("Anna toinen luku: "))
+
+print("Luvut ovat yhteensä: " + str(summa(eka,toka)))
+</pre>
+
+    <p>Kuten huomataan, funktion paluuarvoa ei tarvitse välttämättä sijoittaa muuttujaan, se voi olla osana tulostuslausetta aivan kuten mikä tahansa muukin arvo. Kannattaa kuitenkin huomata, että merkkijonoon liitettäessä kokonaislukumuuttujat tulee muuttaa myös teksti- tai merkkijonotyyppisiksi funktiokutsulla <code>str</code>.</p>
+
+    <p>Seuraavassa esimerkissä funktiota summa kutsutaan kokonaisluvuilla, jotka saadaan <code>summa</code>-metodin paluuarvoina. </p>
+
+<pre class="sh_python">
+def summa(eka, toka):
+ return eka + toka
+
+a = 3
+b = 2
+
+summienSumma = summa(summa(1,2), summa(a,b))
+# 1) suoritetaan sisemmät metodit:
+#    summa(1,2) = 3   ja summa(a,b) = 5
+# 2) suoritetaan ulompi metodi:
+#    summa(3,5) = 8
+
+print(summienSumma)
+</pre>
+
+<pre>
+8
+</pre>
+
+
+                <h3>Funktion omat muuttujat</h3>
+
+    <p>Seuraava funktio laskee syötteinään saamiensa luvun keskiarvon. Metodi käyttää apumuuttujia <code>summa</code> ja <code>ka</code>. Metodin sisäisen muuttujan määrittely tapahtuu tutulla tavalla.</p>
+
+<pre class="sh_python">
+def keskiarvo(luku1, luku2, luku3):
+ summa = luku1 + luku2 + luku3
+ ka = summa/3.0
+
+ return ka
+</pre>
+
+<h2>Tehtävä 36: Lukujen summa</h2>
+
+<p>Tee funktio <code>summa</code>, joka laskee
+listan lukujen summan.</p>
+
+<p>Tee metodi seuraavaan runkoon:</p>
+<pre class="sh_python">
+lista = [3, 2, 7, 2]
+print "Summa: " + str(summa(lista))
+</pre>
+
+<p>Ohjelman tulostus:</p>
+
+<pre>
+Summa: 14
+</pre>
+
+<h2>Tehtävä 37: Lukujen keskiarvo</h2>
+
+<p>Tee funktio <code>keskiarvo</code>, joka laskee listan
+lukujen keskiarvon. Funktiossa kannattaa käyttää
+apuna funktiota <code>summa</code>.</p>
+
+<pre class="sh_python">
+lista = [3, 2, 7, 2]
+print("Keskiarvo: " + str(keskiarvo(lista)))
+</pre>
+
+<p>Ohjelman tulostus:</p>
+
+<pre>
+Keskiarvo: 3.5
+</pre>
+
+<h2>Tehtävä 38: Onko luku listassa?</h2>
+
+<p>Tee ohjelma, joka kertoo, onko käyttäjän antama luku
+listassa.</p>
+
+<p>Lista määritellään koodin alussa seuraavasti:</p>
+
+<pre class="sh_python">
+luvut = [7, 2, 4, 8]
+</pre>
+
+<p>Esimerkkitulostuksia:</p>
+
+<pre>
+Anna luku: <font color="red">4</font>
+Luku on listassa.
+</pre>
+
+<pre>
+Anna luku: <font color="red">3</font>
+Lukua ei ole listassa.
+</pre>
+
+
+
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!--END HOMEPAGE SECTION-->
+
+     <!-- END FOOTER SECTION-->
+     <!-- SCROLLUP LINK SECTION-->
+    <a href="#Homepage" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+     <!--END SCROLLUP LINK SECTION-->
+    <!-- MAIN SCRIPTS SECTION-->
+    <script src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/scrollReveal.js"></script>
+    <script>
+        window.scrollReveal = new scrollReveal(); //please put this script here to show animation at the time of scroll
+    </script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+     <!--END MAIN SCRIPTS SECTION-->
+</body>
+
+    <!--END  BODY SECTION-->
+</html>

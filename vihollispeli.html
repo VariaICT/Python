@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+      <!-- HEAD SECTION-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- MAIN STYLE SECTION-->
+    <link href="assets/plugins/isotope/isotope.css" rel="stylesheet" media="screen" />
+    <link href="assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/plugins/IconHoverEffects-master/css/component.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/about-achivements.css" rel="stylesheet" />
+    <link id="mainStyle" href="assets/css/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <!-- END MAIN STYLE SECTION-->
+</head>
+<!-- END HEAD SECTION-->
+
+     <!-- BODY SECTION-->
+<body>
+
+     <!-- HEADER SECTION-->
+    <div class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="fa fa-bars mobile-bars"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="index.html">Home</a></li><!-- menu links-->
+                    <!--li><a href="perusasiat.html">Perusasiat</a></!--li>
+                    <li><a href="rakenteita.html">Lisää rakenteita</a></li>
+                    <li><a href="funktiot.html">Funktiot</a></li>
+                    <li><a href="kohtipelia.html">Kohti peliä</a></li-->
+                    <li><a href="pygame.html">Peliohjelmoinnin alkeet</a></li>
+                    <li><a href="vihollispeli.html">Vihollispeli</a></li>
+                    <li><a href="projekti.html">Projekti</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+     <!-- END HEADER SECTION-->
+
+    <!--PAGE CONTENT-->
+    <!-- HOMEPAGE SECTION-->
+
+    <section id="Homepage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <div class="align-center">
+                        <h2 class="main-text">VIHOLLISPELI</h2>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section style="margin-top:20px;">
+        <div class="container">
+            <div class="row">
+              <div class="">
+
+                Nyt meillä on liikkuva hahmo. Seuraavaksi tehdään vihollispeli. Jatka Osan 3 koodia.
+
+                <h2>Osa 3: Vihollinen </h2>
+                Jos sinulla ei ole vielä piirrettynä viholliselle sopivaa kuvaa, tee se nyt. Luo koodiisi
+                <code> viholliset </code> -lista heti <code> hahmot </code> -listan jälkeen. Viholliset -listasta tulee muuten samanlainen kuin <code> hahmot
+                </code> -listasta, mutta se tulee sisältämään vihollisia. Jos et muista enää mitään <code> hahmot </code> -listasta,
+                palaa katsomaan edellisen osan <a href="pygame.html#kontrolli"> kontrolli </a> -lukua.
+
+              </br> </br>
+
+              Alusta listaan yksi elementti viholliskuvallasi. Listan tulee näyttää nyt suunnilleen seuraavalta, "vihollinen.png" tilalla oma tiedostonimesi:
+
+</br></br>
+<pre>
+viholliset = [["vihollinen.png", 200, 200]]
+</pre>
+
+<h2>Osa 3: Tarvittavat muutokset koodiin </h2>
+Koodissasi on ehto, jonka mukaan <code>hahmot</code> -listan hahmot ilmestyvät näytölle vasta kun painetaan välilyöntiä.
+Vihollinen ei kuitenkaan nyt ilmesty samalla näytölle koska se ei kuulu <code>hahmot</code> -listaan. Tee nyt tarvittavat muutokset,
+jotta <code>viholliset</code> -listan vihollinen ilmestyy näytölle välilyöntiä painettaessa.
+
+</br> </br>
+Sinun täytyy ensin muokata <code> kontrolli </code> -funktion määrityksessä sen parametreja. Lisää funktion parametriksi vihollislista seuraavasti:
+
+</br></br>
+<pre>
+def kontrolli(hahmot, tapahtuma, viholliset):
+</pre>
+</br>
+ja muokkaa myös funktion kutsumista seuraavaksi:
+</br></br>
+<pre>
+kontrolli(hahmot, tapahtuma, viholliset)
+</pre>
+</br>
+
+Tämän jälkeen katso koodisi ehtolauseen
+</br></br>
+<pre>
+if tapahtuma.key == pygame.K_SPACE:
+</pre>
+</br> sisältöä. Lisää sinne <code> viholliset </code> listan läpikäynti niin että vihollisen näyttämisen <code> False </code> -arvo muutetaan <code>True</code>ksi.
+
+</br></br>
+Myös piirtaminen -funktiota täytyy muokata jotta viholliset piirretään. Muokkaa sitä samaan tapaan kuin kontrolli-funktiota, eli
+aseta funktio ottamaan parametrina myös viholliset -lista. Viholliset-listan sisältö piirretään samankaltaisella for-silmukalla kuin
+hahmot-listan sisältö.
+
+<h2>Osa 3: Pelihahmo kuolee osuessaan viholliseen </h2>
+
+Nyt pelissämme on hahmo, joka liikkuu nuolinäppäimillä, sekä vihollinen joka on paikoillaan. Seuraavaksi koodaa seuraavilla ohjeilla toiminnallisuus, jonka
+mukaan hahmo kuolee osuessaan mihin tahansa viholliset-listan sisältämään viholliseen.
+
+</br> </br> 1. Haluamme, että hahmot-listan ensimmäinen hahmo eli päähahmomme kuolee osuessaan mihin tahansa viholliset-listan viholliseen. Koodaa siis esimerkiksi seuraavanlainen for-silmukka kontrolli-funktion alkuun:</br>
+</br>
+<pre>
+for vihollinen in viholliset:
+</pre>
+
+</br>
+Silmukan sisään tee ehto, joka tarkistaa ovatko vihollisen ja hahmot-listan ensimmäisen hahmon koordinaatit samat. Mikäli ovat,
+poista päähahmo listasta seuraavalla komennolla:
+</br></br>
+<pre>
+del hahmot[0]
+</pre>
+
+<h2>Osa 3: Vihollinen liikkumaan </h2>
+
+Jotta pelistä tulisi kiinnostavampi, vihollinen pitää saada liikkumaan. Koodaa seuraavanlainen liikkumiskäyttäytyminen viholliselle
+kontrolli-funktioon:
+</br></br>
+<pre>
+if vihollinen[1] > 640:
+    vihollinen[1] = 0
+else:
+    vihollinen[1] += 0.5
+</pre>
+Koodissa siis liikutetaan vihollista oikealle, ja kun vihollinen menee näytön yli oikealta, se siirretään näytön vasempaan reunaan.
+
+<h2>Osa 3: Monta vihollista </h2>
+Lisää viholliset-listaan sen alustuksessa useampi vihollinen eri kohdille näyttöä ja kokeile peliä.
+
+<h2>Osa 3: Vihollinen satunnaiseen pystysijaintiin näytöllä </h2>
+Muuta kontrolli-funktion vihollisten sijainnin muuttamista siten, että kun vihollinen siirretään takaisin näytön vasempaan reunaan, sen
+pystykoordinaatti arvotaan nollan ja näytön korkeuden (400) väliltä. 
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!--END HOMEPAGE SECTION-->
+
+     <!-- END FOOTER SECTION-->
+     <!-- SCROLLUP LINK SECTION-->
+    <a href="#Homepage" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+     <!--END SCROLLUP LINK SECTION-->
+   
+    <!-- MAIN SCRIPTS SECTION-->
+    <script src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/scrollReveal.js"></script>
+    <script>
+        window.scrollReveal = new scrollReveal(); //please put this script here to show animation at the time of scroll
+    </script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+     <!--END MAIN SCRIPTS SECTION-->
+</body>
+
+    <!--END  BODY SECTION-->
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!-- HEAD SECTION-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- MAIN STYLE SECTION-->
+  <link href="assets/plugins/isotope/isotope.css" rel="stylesheet" media="screen" />
+  <link href="assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" />
+  <link href="assets/plugins/IconHoverEffects-master/css/component.css" rel="stylesheet" />
+  <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/about-achivements.css" rel="stylesheet" />
+  <link id="mainStyle" href="assets/css/style.css" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <!-- END MAIN STYLE SECTION-->
+</head>
+<!-- END HEAD SECTION-->
+
+<!-- BODY SECTION-->
+
+<body>
+
+  <!-- HEADER SECTION-->
+  <div class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="fa fa-bars mobile-bars"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="index.html">Home</a></li><!-- menu links-->
+          <li><a href="perusasiat.html">Perusasiat</a></li>
+          <li><a href="rakenteita.html">Lisää rakenteita</a></li>
+          <li><a href="funktiot.html">Funktiot</a></li>
+          <li><a href="kohtipelia.html">Kohti peliä</a></li>
+          <li><a href="pygame.html">Peliohjelmoinnin alkeet</a></li>
+          <li><a href="vihollispeli.html">Vihollispeli</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!-- END HEADER SECTION-->
+
+  <!--PAGE CONTENT-->
+  <!-- HOMEPAGE SECTION-->
+
+  <section id="Homepage">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+          <div class="align-center">
+            <h2 class="main-text">PERUSASIAT - TEHDÄÄN LASKIN </h2>
+
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <section style="margin-top:20px;">
+    <div class="container">
+      <div class="row">
+        <div class="">
+
+          Nyt sinulla pitäisi olla asennettuna Python, Pygame ja Visual Studio Code.
+          Tässä osiossa opetellaan Pythonin alkeet: tulostus, muuttujien käyttäminen, syötteen kysyminen käyttäjältä
+          sekä ehtolauseet.
+
+          Näiden avulla teemme pieniä harjoituksia ja lopulta laskimen, jolle käyttäjä voi antaa kaksi lukua sekä
+          haluamansa laskutoimituksen.
+          Tulokseksi käyttäjä saa laskutoimituksen tuloksen.
+
+          <h2> Miten Python-koodia koodataan ja miten tietokone suorittaa sen? </h2>
+          Python on tulkittava
+          kieli. Se tarkoittaa suurpiirteisesti sitä, että
+          kun ohjelma ajetaan, Python-tulkki tulkitsee rivi kerrallaan koodisi tietokoneen
+          ymmärtämään muotoon ja suorittaa koodirivin.
+
+          <h2>Tehtävä 2: Tulostus</h2>
+
+          1. Ensin sinun pitää varmistaa, että koneellesi on Python asennettuna. Myös Code tarvitsee Python
+          laajennuksen.
+          <br><br>
+          <img src="python_extension.png" />
+          <br><br>
+
+          2. Luo sen jälkeen GitHubiin uusi repositorio Python, avaa paikallinen kansio Codessa ja luo sen sisään
+          tiedosto laskin.py
+          <br>
+          3. Kirjoita tiedostoon allaoleva koodirivi. Pythonissa on erittäin tärkeää että lainausmerkit ja sulut ovat
+          oikeassa järjestyksessä, joten
+          jos ohjelma ei toimi niin tarkista että ne on kirjoitettu oikein. </br>
+          </br>
+          <pre>print("Hei maailma")</pre>
+          </br> </br>
+          4. Aja koodi klikkaamalla hiiren oikealla näppäimellä koodisi päällä, ja valitsemalla "Run Python File in
+          Terminal":
+
+          </br></br>
+          <img src="run_python.png" />
+          </br></br>
+
+          </br></br> Ohjelman pitäisi tulostaa "Hei maailma". Tulostuksen pitäisi Coden alalaidassa olevassa
+          tulostusikkunassa näyttää tältä:
+          </br></br>
+          <img src="result_python.png" />
+          </br></br>
+
+
+          <h2>Muuttujat </h2>
+
+          Muuttuja on <i> tietorakenne </i>, johon voi säilöä arvon. Muuttuja on kuin laatikko, jolla on nimi, ja johon
+          voi laittaa yhden esineen. Seuraavassa kuvassa esittelemme muuttujat, eli laatikot, joiden nimet
+          ovat x ja muuttuja. Laatikot ovat tällä hetkellä tyhjiä.
+
+          </br></br>
+          <img src="assets/img/muuttujalaatikko2.png" /> </br></br>
+
+          Nyt laitamme laatikoihin sisältöä. Laatikko jonka nimi on x, saa sisällökseen numeron 1. Laatikko jonka nimi
+          on paikka, saa sisällökseen
+          Kumpula.
+
+
+          </br></br>
+          <img src="assets/img/muuttujalaatikko_sisältö2.png" /> </br></br>
+
+          Pythonissa muuttujiin voi tallentaa mitä tahansa Pythonin tietotyyppejä, aivan kuin laatikoihinkin voi laittaa
+          mitä tahansa.
+          Tietotyyppejä ovat esimerkiksi luku ja merkkijono.
+
+          Näin Pythonissa asetetaan arvot muuttujiin:
+          </br> </br>
+          <pre>
+            x=1</br>
+            paikka="Kumpula"
+          </pre>
+          </br> </br>
+          Pythonissa muuttujia ei tarvitse ensin erikseen luoda, vaan niiden luonti tapahtuu kun niihin ensimmäisen
+          kerran asetetaan arvo.
+          Ylläolevassa Python-koodissa ensimmäisellä rivillä asetetaan muuttujaan x arvo 1, ja toisella rivillä
+          asetetaan muuttujaan paikka
+          arvo Kumpula. Kun muuttujaan tallennetaan merkkijono, eli esimerkiksi Kumpula, merkkijonon ympärille pitää
+          lisätä lainausmerkit.
+          Myös numero voi olla merkkijono jos sen ympärille lisää lainausmerkit, esimerkiksi "12" on merkkijono.
+
+          <h3> Merkkijonon ympärillä on lainausmerkit! </h3>
+          Muuttujan voi myös tulostaa. Se edellyttää kuitenkin että muuttujaan on tallennettu jokin arvo aiemmin.
+          Muuttujan tulostus tapahtuu näin:
+
+          </br> </br>
+          <pre>
+            print(paikka)
+          </pre>
+          </br>
+
+          <h2> Tehtävä 3: Muuttujan tulostus </h2>
+
+          1. Määrittele muuttuja nimi, jolle annat arvoksi oman nimesi <i>merkkijonona</i> (eli lainausmerkit "" nimen
+          ympärillä).
+
+          </br> </b3> 2. Tulosta tämän jälkeen tämä muuttuja. Tulostua pitäisi muuttujan
+          sisältö, eli oma nimesi.
+
+          <h2>Laskutoimitukset</h2>
+
+          Tietokone osaa tehdä laskutoimituksia Python-koodin antamien ohjeiden mukaisesti. Harjoitellaan nyt tekemään
+          yhteen-, kerto- ja vähennyslaskuja Pythonilla.
+          </br> </br>
+          <pre>
+            print(1 + 4)
+          </pre>
+          </br>
+
+          <h2> Tehtävä 4: Tee laskutoimituksia </h2>
+          1. Tee ohjelma, joka Pythonissa tulostaa kahden luvun tulon. Pythonissa kertomerkki on
+          tähtimerkki *. Valitse luvut itse. Käytä ylläolevaa 1 + 4 -esimerkkiä apuna.
+
+          </br> </br> 2. Tee ohjelma, joka tulostaa edellisessä kohdassa käyttämiesi lukujen
+          erotuksen.
+
+          <h2>Laskutoimituksen tuloksen tallentaminen muuttujaan</h2>
+          Laskutoimituksen tuloksen voi tallentaa muuttujaan ja käyttää muuttujaa myöhemmin. Seuraavassa esimerkissä
+          tallennetaan lukujen 2 ja 1 erotus muuttujaan <i> erotus </i> sekä tulostetaan muuttuja sen jälkeen.
+
+          </br></br>
+          <pre>
+erotus = 2 - 1
+print(erotus)
+</pre>
+
+          <h2> Tehtävä 5: Laskutoimituksen tulos muuttujaan </h2>
+          Tee ohjelma, joka laskee yhteenlaskun 1 + 5 tallentaen sen tuloksen muuttujaan summa. Tämän jälkeen tulosta
+          muuttuja summa. 
+
+          <h2> Merkkijonon kysyminen käyttäjältä ja sen tallentaminen muuttujaan </h2>
+          Nyt osaamme tulostaa muuttujan sekä tekstiä. 
+          <br/><br/>
+          Testaa Python-esimerkkiä.
+
+          </br> </br>
+          <pre>
+vastaus = input("Anna merkkijono: ")
+print(vastaus)
+</pre>
+
+          <h2> Luvun kysyminen käyttäjältä ja sen tallentaminen muuttujaan </h2>
+          Entä jos haluaisimme tehdä laskutoimituksen, jonka luvut riippuvat käyttäjästä? Haluaisimme siis, että
+          käyttäjä voisi antaa kaksi
+          lukua ja tietokone voisi laskea esimerkiksi niiden yhteenlaskun. Näin pääsisimme lähemmäksi osion lopullista
+          tavoitettamme, laskimen koodaamista.
+
+          <h2> Tehtävä 6: Tee esimerkin mukaan </h2>
+
+          Seuraava koodi kysyy käyttäjältä kaksi lukua,
+          asettaa ne muuttujiin x ja y, sekä tulostaa niiden summan. Kirjoita koodi tekstieditoriin, aja se ja testaa
+          ohjelmaa. Sen jälkeen jatka lukemista ja tee ohjeen mukaan.
+
+          </br></br>
+          <pre>
+x = int(input("Anna ensimmäinen luku: "))
+y = int(input("Anna toinen luku: "))
+summa = x + y
+print(summa)
+</pre>
+
+          <br> Ylläoleva koodi näyttää monimutkaiselta siksi, että se kysyy lukuja eikä tekstiä. Koodi
+
+          <code> x = int(input("Anna ensimmäinen luku: ")) </code> kysyy siis lukua ja tallentaa sen muuttujaan x, siinä
+          missä koodi
+          <code> x = input("Anna ensimmäinen luku: ")</code> kysyisi merkkijonoa ja tallentaisi sen muuttujaan x.
+
+
+          </br> </br>
+          Poista nyt lukujen kysymisistä int( ) -ympärykset siten että koodisi näyttää sen jälkeen tältä:
+
+          </br></br>
+          <pre>
+          x = input("Anna ensimmäinen luku: ")
+          y = input("Anna toinen luku: ")
+          summa = x + y
+          print(summa)
+          </pre>
+
+          </br> Testaa ohjelmaa. Mitä tulokselle käy, onko tulos oikein? Mistä arvelet sen johtuvan?
+          </br> Vastaus on, että int( ) -koodilla ympäröity käyttäjältä luvun kysyminen kohtelee kysyttyä lukua
+          <i>lukuna</i>, kun taas ilman
+          int( ) -ympäryksiä oleva input-käsky kohtelee kysyttyä lukua <i>merkkijonona</i>. int() -komento muuttaa
+          merkkijonon luvuksi. Ensimmäisessä esimerkissä siis lukujen yhteenlasku lasketaan oikein,
+          toisessa esimerkissä vain yhdistetään kysytyt luvut niin että esimerkiksi luvuista 1 ja 2 tulisi tulokseksi
+          "12".
+
+          <h2>Tehtävä 7: Tulosta käyttäjältä kysyttyjen lukujen osamäärä </h2>
+          Tee ohjelma, joka kysyy käyttäjältä kaksi lukua ja tulostaa niiden osamäärän. Kahden luvun jakolasku tehdään
+          Pythonissa / -merkillä.
+
+          <h2>Ehdollisuus</h2>
+          Ehdollisuus tarkoittaa sitä, että ohjelmassa seuraavaksi suoritettavat käskyt riippuvat ohjelmoijan antamista
+          ehdoista.
+
+          </br> </br>
+          Seuraavista Python-esimerkeistä lähtien
+          mukana on <i>sisennyksiä</i> koodissa. Sisennys siis tarkoittaa sitä, että seuraava koodirivi alkaa sisempää
+          kuin edellinen. Pythonissa sisennykset on erittäin tärkeitä
+          tehdä oikein esimerkkien mukaan, muuten koodin ajaminen ei onnistu. Yhtä sisennettyä
+          koodialuetta kutsutaan <i> lohkoksi </i>. Lohko-sanaa tullaan käyttämään myöhemmin.
+
+          <h2 id="onkolukupositiivinen"> Esimerkki ehdollisuudesta: Onko luku positiivinen </h2>
+
+          Otetaan esimerkiksi ohjelma, joka kysyy käyttäjältä lukua ja kertoo, onko luku positiivinen vai negatiivinen.
+          Tässä esimerkissä 0 lasketaan mukaan positiiviseksi luvuksi.
+
+          <pre>
+luku = int(input("Anna luku: "))
+if luku > -1:
+    print("Luku on positiivinen")
+else:
+    print("Luku on negatiivinen")
+</pre>
+
+          Ohjelma siis toimii niin, että ensin kysytään käyttäjältä lukua ja tallennetaan se muuttujaan <i> luku </i>.
+          Tämän jälkeen jos luku on suurempi kuin -1, tulostetaan
+          "Luku on positiivinen" (if). Jos luku ei ole suurempaa kuin -1 eli on -1 tai pienempi kuin se, tulostetaan
+          "Luku on negatiivinen" (else).
+
+          <h3> Huom! Else -lohko ei ole pakollinen. Mikäli ylläolevasta esimerkistä poistettaisiin else-lohko
+            sisältöineen, ohjelma
+            tulostaisi "Luku on positiivinen" jos luku on positiivinen, mutta jos luku on negatiivinen niin se ei
+            tulostaisi mitään. </h3>
+
+          <h2> Tehtävä 8: Vuositarkistus </h2>
+
+          Tee ohjelma, joka kysyy käyttäjältä vuoden. Mikäli vuosi on jo mennyt (eli on pienempi kuin 2020), tulostetaan
+          "Vuosi meni jo!", muuten tulostetaan: "Vuosi ei ole vielä mennyt.".
+          Käytä kopioimaasi luvun positiivisuuden/negatiivisuuden ilmoittavaa esimerkkiä pohjana.
+
+          <h2> Suuruuden vertailuoperaattorit </h2>
+
+          Edellisessä tehtävässä käytettiin if-lauseessa pienempi kuin -operaattoria. Seuraavassa taulukossa kaikki
+          vertailuoperaattorit ja niiden merkitykset.
+          Huomaa että Pythonissa "pienempi tai yhtä suuri kuin" sekä "suurempi tai yhtä suuri kuin" toteutetaan yhdellä
+          operaattorilla.
+
+          <table border="1" style="margin-top: 20px;">
+            <tr>
+              <th>operaattori</th>
+              <th>merkitys</th>
+              <th>esimerkki</th>
+            </tr>
+            <tr>
+              <td>
+                <</td> <td>pienempi kuin
+              </td>
+              <td>1 < 2</td>
+            </tr>
+            <tr>
+              <td>></td>
+              <td>suurempi kuin</td>
+              <td>1 > 2</td>
+            </tr>
+            <tr>
+              <td>==</td>
+              <td>yhtä suuri kuin</td>
+              <td>1 == 2</td>
+            </tr>
+            <tr>
+              <td>
+                <=</td> <td>pienempi tai yhtä suuri kuin
+              </td>
+              <td>1 <= 2</td>
+            </tr>
+            <tr>
+              <td>>=</td>
+              <td>suurempi tai yhtä suuri kuin</td>
+              <td>1 >= 2</td>
+            </tr>
+
+          </table>
+
+          <h2> Esimerkki ehdollisuudesta: Salasana </h2>
+
+          Seuraava esimerkkikoodi kysyy käyttäjältä syötettä <i> merkkijonona </i>. Mikäli syöte on sama kuin
+          salasanamme
+          "python2020", paljastetaan jouluaaton päivämäärä. Mikäli käyttäjän antama salasana on
+          väärin,
+          tulostetaan "Salasana väärin!". </br>
+
+          </br>
+          <pre>
+            salasana = "python2020"
+            syote = input("Anna salasana: ")
+            if syote == salasana:
+              print("Jouluaatto on 24.12.2020.")
+            else:
+              print("Salasana väärin!")
+          </pre> </br>
+
+          <h2 id="montaelselohkoa"> Monta else -lohkoa </h2>
+          Edellisessä tehtävässä ohjelma tarkisti, onko käyttäjän antama vuosi mennyt vai ei. Nyt haluamme tehdä
+          tarkempaa analyysiä, kuinka kaukana menneisyydessä annettu vuosiluku on.
+          Seuraavassa esimerkissä kerrotaan, onko vuosi mennyt, 2000-luvulla vai 1900-luvulla tai aiemmin. Kopioi
+          esimerkki ja kokeile sitä.
+          </br></br>
+          <pre>
+luku = int(input('Anna vuosi: '))
+if luku >= 2017:
+    print('Vuosi ei ole vielä mennyt.')
+elif luku < 2000:
+    print('Vuosi on 1900-luvulla tai aiemmin')
+else:
+    print('Vuosi on 2000-luvulla')
+</pre>
+          </br>
+
+          <h2> Tehtävä 9: Huomioidaan jos luku on nolla </h2>
+          Tehtävänäsi on
+          toteuttaa ohjelma, joka
+          kysyy käyttäjältä lukua, ja tulostaa "Luku on nolla", jos luku on 0, "Luku on positiivinen", jos luku on
+          suurempi kuin nolla,
+          ja "Luku on negatiivinen" jos luku on pienempi kuin nolla.
+
+          <h2> Laskin </h2>
+          Seuraava projekti on tehdä laskin, joka ottaa syötteinä kaksi lukua ja laskutoimituksen. Ohjelman tulee laskea
+          näille luvuille
+          käyttäjän antama laskutoimitus ja tulostaa lopputulos. Ohjelma tehdään kahdessa osassa seuraavissa tehtävissä.
+
+          <h2> Tehtävä 10: Laskin osa 1 </h2>
+          Laskinohjelman alussa tulee kysyä käyttäjältä kaksi lukua, tallentaa ne muuttujiin, sekä kysyä laskutoimitus
+          <i>merkkijonona</i> ja tallentaa se muuttujaan.
+          Lukujen ja laskutoimituksen tulee näyttää seuraavalta ohjelmaa suoritettaessa:
+
+          </br></br> <img src="assets/img/laskinsyöte.png" alt="Anna ensimmäinen luku: 1
+    &#10; Anna toinen luku: 2
+    &#10; Anna laskutoimitus joukosta +, -, * ja /: +" />
+
+          <br>
+
+          Huomioi, että luku kysytään käyttäjältä eri tavalla kuin merkkijono.
+
+          <h2> Tehtävä 10: Laskin osa 2 </h2>
+          Nyt meillä on muuttujiin tallennettuina kaksi lukua <i> lukuina </i> sekä laskutoimitus <i> merkkijonona </i>.
+          Seuraavaksi tarvitsemme ehdollisuutta, tavoitteena
+          tunnistaa eri laskutoimitukset ja laskea lopputulos tunnistetun laskutoimituksen perusteella. Vinkkinä
+          kannattaa katsoa kohtaa <a href="#montaelselohkoa"> "Monta else -lohkoa" </a> sekä seuraavaa kuvaa:
+
+          </br></br> <img src="assets/img/muuttujaplussa.png" alt="if muuttuja == " +": &#10; &emsp; print("Muuttuja oli
+            +")" />
+          <br>
+
+          Sinun täytyy siis toteuttaa ehdollisuus tunnistamaan eri laskutoimitukset, ja tulostaa laskutoimituksen
+          lopputulos jokaisessa lohkossa erikseen, riippuen laskutoimituksesta.
+          Testaa että ohjelmasi toimii seuraavanlaisesti (jokaisella laskutoimituksella oikea tulos)
+
+          </br></br> <img src="assets/img/laskinlopputulos.png" alt="Anna ensimmäinen luku: 1
+    &#10; Anna toinen luku: 3
+    &#10; Anna laskutoimitus joukosta +, -, * ja /: +
+    &#10; 4" />
+          <br>
+
+          <h2> Totuusarvot </h2>
+
+          Muuttuja voi olla merkkijonon ja luvun lisäksi myös totuusarvo. Totuusarvoja ovat <i> True </i> eli tosi ja
+          <i> False </i> eli epätosi. Totuusarvoja itse asiassa käytetään jokaisessa if-lauseessa.
+          Jokainen if-ehto saa koodia suoritettaessa totuusarvon sen perusteella onko ehto tosi vai ei, ja sen
+          perusteella ohjelman suorituksessa päätellään siirrytäänkö
+          ehdon sisällä olevaan lohkoon vai ei. Esimerkiksi ehto
+
+          <code> if 1 == 1</code> on aina tosi.
+          </br>
+          Muuttujaan voi sijoittaa totuusarvon seuraavilla tavoilla: </br></br>
+          <code>
+       tosimuuttuja = True
+      </br>
+       epätosimuuttuja = False
+     </code> </br></br>
+
+          Muuttujaan voi sijoittaa totuusarvon myös ehtona. Esimerkiksi seuraavan koodin tulostukseksi tulee True.
+
+          </br></br>
+          <code>
+     totuusarvo = 1 < 2
+    </br>
+     print(totuusarvo)
+   </code> </br>
+          <h2> Loogiset operaattorit </h2>
+          Loogisilla operaattoreilla voidaan yhdistää monta ehtoa eri logiikoilla tai laskea totuusarvon
+          <i>negaatio</i>. Negaatio tarkoittaa päinvastaista totuusarvoa kuin totuusarvo josta negaatio otetaan.
+          Negaation voi laskea seuraavalla tavalla esimerkiksi muuttujasta nimeltään totuusarvo:
+
+          </br> </br>
+          <code>
+       negaatio = not totuusarvo
+     </code>
+
+          </br> </br>
+
+          Muita tällä kurssilla käsiteltäviä totuusarvoja ovat <i> and </i> ja <i> or </i>. Or-operaattorilla
+          yhdistettävät totuusarvot ovat yhteensä tosi jos jompikumpi yhdistettävistä totuusarvoista on tosi.
+          And-operaattorilla yhdistettävät totuusarvot ovat tosi jos molemmat yhdistettävät totuusarvot ovat tosi.
+
+          <table border="1" style="margin-top: 20px;">
+            <tr>
+              <th>operaattori</th>
+              <th>merkitys</th>
+            </tr>
+            <tr>
+              <td>and</td>
+              <td>Yhdistää kaksi totuusarvoa, tosi jos molemmat ovat tosi. </td>
+            </tr>
+            <tr>
+              <td>or</td>
+              <td>Yhdistää kaksi totuusarvoa, tosi jos jompikumpi tai molemmat ovat tosi. </td>
+            </tr>
+            <tr>
+              <td>not</td>
+              <td>Negaatio totuusarvosta eli päinvastainen totuusarvo </td>
+            </tr>
+
+          </table> </br>
+
+          Seuraavan ohjelman avulla voi selvittää, tarvitseeko lastenlipun Helsingin paikallisbusseissa.
+          </br></br>
+          <code>
+      ikä = int(input("Anna ikäsi: "))
+    </br>if ikä >= 7 and ikä <= 16:
+    </br> &emsp;&emsp; print("Tarvitset lastenlipun")
+    </br>else:
+   </br>   &emsp;&emsp; print("Olet aikuinen tai niin pieni lapsi että voit matkustaa ilmaiseksi")
+
+    </code>
+          </br></br>
+
+          <h2> Tehtävä 11: Alaikäinen </h2>
+          Tee ohjelma, joka kysyy käyttäjältä iän ja tulostaa, onko
+          käyttäjä alaikäinen, eli hänen ikänsä on vähintään 0 mutta alle 18.
+
+          <h2> Tehtävä 12: Sekunnit vuodessa </h2>
+          Tee ohjelma, joka laskee, kuinka monta sekuntia on vuodessa. Voit olettaa, että vuodessa on 365 päivää (eli ei
+          ole karkausvuosi).
+          Tulosta lopputulos.
+
+          <h2> Tehtävä 13: Parillinen vai pariton? </h2>
+          Tee ohjelma, joka kysyy käyttäjältä luvun ja ilmoittaa, onko se parillinen vai pariton. Vihje: Luvun
+          jakojäännös 2:lla kertoo, onko luku parillinen vai pariton. Jakojäännos taas saadaan %-operaattorilla.
+          Esimerkiksi luvun 5 jakojäännöksen 2:lla saa näin:
+          </br></br>
+          <code>
+    jakojäännös = 5 % 2
+  </code> </br></br>
+
+          <h2> Tehtävä 14: Arvosanat ja pisteet </h2>
+          Tee ohjelma, joka ilmoittaa kurssiarvosanan seuraavan taulukon mukaisesti:
+          </br> </br>
+          <table border="1">
+            <tr>
+              <th>pistemäärä</th>
+              <th>arvosana</th>
+            </tr>
+            <tr>
+              <td>0&ndash;29</td>
+              <td>hylätty</td>
+            </tr>
+            <tr>
+              <td>30&ndash;34</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>35&ndash;39</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>40&ndash;44</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>45&ndash;49</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>50&ndash;60</td>
+              <td>5</td>
+            </tr>
+          </table>
+
+          </br>
+          <p>Esimerkkitulostuksia:</p>
+          <pre>
+Anna pisteet [0-60]: <font color="red">37</font>
+
+2
+</pre>
+
+          <pre>
+Anna pisteet [0-60]: <font color="red">51</font>
+
+5
+</pre>
+
+          <h2> Tehtävä 15: Luvut suuruusjärjestyksessä </h2>
+
+          <p>Tee ohjelma, joka kysyy käyttäjältä kolme lukua ja tulostaa ne suuruusjärjestyksessä.</p>
+
+          <pre>
+Anna ensimmäinen luku: <font color="red">8</font>
+Anna toinen luku: <font color="red">1</font>
+Anna kolmas luku: <font color="red">3</font>
+
+1
+3
+8
+</pre>
+
+          <p>Toimiihan ohjelmasi myös, jos käyttäjä antaa monta kertaa saman luvun?</p>
+
+          <h2>Tehtävä 16: Karkausvuosi</h2>
+
+          <p>Vuosi on karkausvuosi, jos se on jaollinen 4:llä. Kuitenkin jos vuosi on jaollinen 100:lla, se on
+            karkausvuosi vain silloin, kun se on jaollinen myös 400:lla.</p>
+
+          <p>Tee ohjelma, joka tarkistaa, onko vuosi karkausvuosi.</p>
+
+          <pre>
+   Anna vuosi: <font color="red">2011</font>
+   Vuosi ei ole karkausvuosi.
+   </pre>
+
+          <pre>
+   Anna vuosi: <font color="red">2012</font>
+   Vuosi on karkausvuosi.
+   </pre>
+
+
+
+        </div>
+      </div>
+  </section>
+
+
+  <!--END HOMEPAGE SECTION-->
+
+  <!-- END FOOTER SECTION-->
+  <!-- SCROLLUP LINK SECTION-->
+  <a href="#Homepage" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+  <!--END SCROLLUP LINK SECTION-->
+  <!-- MAIN SCRIPTS SECTION-->
+  <script src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/scrollReveal.js"></script>
+  <script>
+    window.scrollReveal = new scrollReveal(); //please put this script here to show animation at the time of scroll
+  </script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
+  <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+  <script src="assets/js/jquery.appear.js"></script>
+  <script src="assets/scripts/main.js"></script>
+
+  <!--END MAIN SCRIPTS SECTION-->
+</body>
+
+<!--END  BODY SECTION-->
+
+</html>

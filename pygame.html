@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+      <!-- HEAD SECTION-->
+<head>
+    <meta charset="utf-8">
+    <title>Python</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- MAIN STYLE SECTION-->
+    <link href="assets/plugins/isotope/isotope.css" rel="stylesheet" media="screen" />
+    <link href="assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/plugins/IconHoverEffects-master/css/component.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/about-achivements.css" rel="stylesheet" />
+    <link id="mainStyle" href="assets/css/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <!-- END MAIN STYLE SECTION-->
+</head>
+<!-- END HEAD SECTION-->
+
+     <!-- BODY SECTION-->
+<body>
+
+     <!-- HEADER SECTION-->
+    <div class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="fa fa-bars mobile-bars"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="index.html">Home</a></li><!-- menu links-->
+                    <!--li><a href="perusasiat.html">Perusasiat</a></!--li>
+                    <li><a href="rakenteita.html">Lisää rakenteita</a></li>
+                    <li><a href="funktiot.html">Funktiot</a></li>
+                    <li><a href="kohtipelia.html">Kohti peliä</a></li-->
+                    <li><a href="pygame.html">Peliohjelmoinnin alkeet</a></li>
+                    <li><a href="vihollispeli.html">Vihollispeli</a></li>
+                    <li><a href="projekti.html">Projekti</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+     <!-- END HEADER SECTION-->
+
+    <!--PAGE CONTENT-->
+    <!-- HOMEPAGE SECTION-->
+
+    <section id="Homepage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <div class="align-center">
+                        <h2 class="main-text">PELIOHJELMOINNIN ALKEET</h2>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+	    
+	    
+<section style="margin-top:20px;">
+        <div class="container">
+            <div class="row">
+              <div class="">
+                  Tässä osiossa opetellaan toteuttamaan joitakin peleissä tärkeitä asioita Pythonilla. 
+		      
+		  Tee kaikki Osan 1 tehtävät samaan Python tiedostoon ja palauta versionhallintaan.
+
+                  <h2>Osa 1: Satunnaisuus </h2>
+
+                Nyt opetellaan Pythonilla satunnaisluvun generoiminen valmista funktiota apuna käyttäen.
+                Ensin Pythonissa tarvitaan random -kirjastoa. Se tuodaan ohjelmaan import random -käskyllä. random.randint(1, 10)
+                arpoo satunnaisluvun väliltä 1..10.
+
+  </br>  </br>
+<pre>
+import random
+
+print(random.randint(1, 10))
+</pre>
+
+
+<h2>Osa 1: Nopan heittäminen</h2>
+
+<p>Tee ohjelma, joka heittää noppaa ja ilmoittaa silmäluvun.</p>
+
+<p>Ohjelman mahdollisia tulostuksia ovat esimerkiksi seuraavat:</p>
+
+<pre>
+Silmäluku: 3
+</pre>
+
+<pre>
+Silmäluku: 5
+</pre>
+
+<h2>Osa 1: Kolikon heittäminen</h2>
+
+<p>Tee ohjelma, joka heittää kolikkoa ja ilmoittaa tuloksen (kruuna tai klaava).</p>
+
+<p>Ohjelman mahdolliset tulostukset ovat seuraavat:</p>
+
+<pre>
+Tulos: kruuna
+</pre>
+
+<pre>
+Tulos: klaava
+</pre>
+
+<h2>Osa 1: Salasanan arpoja</h2>
+
+<p>Tee ohjelma, joka arpoo käyttäjälle salasanan.
+Salasana muodostuu merkeistä a-z ja siinä on 8 merkkiä.</p>
+
+<p>Ohjelman tulostuksia ovat esimerkiksi seuraavat:</p>
+
+<pre>
+Salasana: zitbfsnt
+</pre>
+
+<pre>
+Salasana: wlprcusq
+</pre>
+
+<h2>Osa 1: Sekoittaja</h2>
+
+<p>Tee ohjelma, joka sekoittaa listan sisällön.
+Sovella ohjelmassa satunnaisuutta haluamallasi tavalla.</p>
+
+<p>Ohjelman runko on seuraava:</p>
+
+<pre class="sh_python">
+luvut = [1, 2, 3, 4, 5, 6, 7, 8]
+sekoitaLista(luvut)
+tulostaLista(luvut)
+</pre>
+
+<h2>Osa 1: Vihollisen sijainnit</h2>
+Tee ohjelma, joka luo listan nimeltään vihollisenSijainnit ja arpoo 1000 kappaletta vihollisen sijainteja lisäten ne listaan.
+Vihollisen sijainti on merkkijonopari x,y. Esimerkiksi "5,16" on kelpo vihollisen sijainti. Sekä x- että y-koordinaatit voivat
+olla väliltä 0-100. Tulosta lopuksi lista jotta näet mitä se sisältää.
+
+</br></br>
+Vinkki: Muistathan että merkkijonoja yhdistetään plusmerkillä.
+
+<pre>
+merkkijono = "a"
+merkkijono += "bc"
+print(merkkijono)  #tulostuu abc
+</pre>
+
+<h2>Osa 1: Listan järjestäminen </h2>
+
+Saatat tarvita peliä tehdessä listan järjestämistä esimerkiksi pisteiden tai etäisyyksien suuruusjärjestykseen laittamisessa. Seuraavassa esimerkissä
+määritellään, järjestetään lista valmista funktiota kutsumalla ja tulostetaan se. Jos olet kiinnostunut tarkemmin siitä miten järjestäminen toimii
+sort -funktion sisällä, googlaa esimerkiksi kuplalajittelu (bubble sort) tai lomituslajittelu (merge sort).
+</br></br>
+<pre>
+lista = [1, 3, 5, 4]
+lista.sort()
+print(lista) #tulostuu [1, 3, 4, 5]
+</pre>
+
+<h2>Osa 1: Pistelista</h2>
+Tee ohjelma, joka kysyy käyttäjältä pelaajan nimen ja pisteet ja jatkaa tätä, kunnes käyttäjä antaa syötteen "lopeta" pelaajaa kysyttäessä. Tämän jälkeen
+tulostetaan parhaat pisteet ja niiden pelaaja.
+
+</br></br>
+<pre>
+Anna pelaaja: Pihla
+Anna pisteet: 50
+Anna pelaaja: Ada
+Anna pisteet: 65
+Anna pelaaja: lopeta
+
+Pihla, 50
+
+</pre>
+
+
+              </div>
+            </div>
+        </div>
+    </section>	    
+	    
+	    
+    <section style="margin-top:20px;">
+        <div class="container">
+            <div class="row">
+              <div class="">
+		
+                  <h2>Osa 2: Ikkuna </h2>
+		  Tee kaikki Osan 2 tehtävät samaan Python tiedostoon ja palauta versionhallintaan.<br><br>
+                  Pygame on Python-kirjasto, jonka avulla teemme pelejä. Ikkuna on Pygame-pelin pohja: ilman ikkunaa ei voi olla peliä. 
+		  <br>Kaikki pelin elementit tullaan sijoittamaan ikkunaan. 
+		  
+		  Luodaan ensin ikkuna Pygamella seuraavalla koodilla (kopioi koodi editoriisi ja aja se):
+
+</br> </br>
+<pre>
+import pygame
+
+naytto = pygame.display.set_mode((640, 400))
+pygame.display.set_caption("Ensimmäinen peli")
+
+def main():
+    while True:
+        tapahtuma = pygame.event.poll()
+        if tapahtuma.type == pygame.QUIT:
+            break
+
+main()
+</pre>
+
+Ohjelman tulisi luoda seuraavanlainen ikkuna:
+
+</br></br>
+ <img src="assets/img/ensimmainenpeli.png" width="500"/> </br>
+
+
+ <h2>Osa 2: Ikkunaohjelman rakenne</h2>
+
+<p>Nyt on aika katsoa tarkemmin ohjelman koodin rakennetta.</p>
+
+<p>Ensimmäinen rivi tulee jokaisen ohjelmamme alkuun. Tämä rivi ottaa käyttöön peliohjelmointiin
+tarkoitetun pygame-kirjaston. </p>
+
+<pre class="sh_python">
+import pygame
+</pre>
+
+<p>Seuraava rivi luo ikkunan, jonka leveys on 640 pikseliä ja korkeus on 400
+pikseliä:</p>
+
+<pre class="sh_python">
+naytto = pygame.display.set_mode((640, 400))
+</pre>
+
+<p>Seuraava rivi määrittää ikkunan otsikon:</p>
+
+<pre>
+pygame.display.set_caption("Ensimmäinen peli")
+</pre>
+
+<p>Tämän jälkeen määritellään <em>pääohjelmafunktio</em>. Funktiossa <code>main</code> on ohjelman <i>pääsilmukka</i>. Pääsilmukassa kuunnellaan käyttäjän tekemiä toimintoja, ja odotetaan niin kauan, kunnes syntyy tapahtuma <code>pygame.QUIT</code>. Tapahtuma <code>pygame.QUIT</code> syntyy esimerkiksi silloin, kun käyttäjä sulkee ohjelman painamalla ikkunan oikeassa ylänurkassa olevaa raksia. Lisäämme myöhemmin ohjelmaan lisää peliin liittyvää koodia.</p>
+
+<pre class="sh_python">
+def main():
+    while True:
+        tapahtuma = pygame.event.poll()
+        if tapahtuma.type == pygame.QUIT:
+            break
+</pre>
+
+
+<p>Tämän jälkeen, ohjelman "viimeisellä" rivillä, on komento <code>main()</code>, joka suorittaa <code>main</code>-funktiossa olevan koodin.</p>
+
+
+<h2>Osa 2: Piirtäminen </h2>
+
+<h3>Värit</h3>
+
+<p>Tavallinen tapa ilmoittaa väri ohjelmoinnissa on käyttää RGB-merkintää. RGB tulee sanoista "red-green-blue" eli "punainen-vihreä-sininen". Sekoittamalla punaista, vihreää ja sinistä saadaan kaikki värit. Jokaisen värin osan määrä annetaan lukuna väliltä 0&ndash;255.</p>
+
+<p>Esimerkkejä RGB-väreistä:</p>
+
+<ul>
+  <li> musta: (0, 0, 0)</li>
+  <li> valkoinen: (255, 255, 255)</li>
+  <li> punainen: (255, 0, 0)</li>
+  <li> vihreä: (0, 255, 0)</li>
+  <li> sininen: (0, 0, 255)</li>
+  <li> keltainen: (255, 255, 0)</li>
+  <li> tummanharmaa: (100, 100, 100)</li>
+  <li> vaaleanharmaa: (200, 200, 200)</li>
+</ul>
+
+
+<h2>Osa 2: Viiva</h2>
+
+<p>Seuraava koodi näyttää ikkunan, jossa on sininen viiva:</p>
+
+<pre class="sh_python">
+import pygame
+
+naytto = pygame.display.set_mode((640, 400))
+pygame.display.set_caption("Piirtäminen")
+
+def main():
+    while True:
+        tapahtuma = pygame.event.poll()
+        if tapahtuma.type == pygame.QUIT:
+            break
+
+        naytto.fill((0, 0, 0))
+        pygame.draw.line(naytto, (0, 0, 255), (100, 50), (400, 370))
+        pygame.display.flip()
+
+main()
+</pre>
+
+<p>Huomaamme että ohjelmarunko on hyvin samanlainen kuin johdanto-osassa. Tässä olemme lisänneet pääsilmukkaan komennot <code>naytto.fill</code>, <code>pygame.draw.line</code> ja <code>pygame.display.flip</code>. Komento <code>naytto.fill</code> täyttää näytön mustalla värillä. Komento <code>pygame.draw.line</code> taas piirtää viivan, ja se saa <em>parametreina</em> seuraavanlaisia asioita:</p>
+
+<pre>
+pygame.draw.line(naytto, (red, green, blue), (alkux, alkuy), (loppux, loppuy))
+</pre>
+
+<p><em>Parametrit</em> ovat arvoja, joita komennoille voidaan antaa. Yllä olevalle <code>pygame.draw.line</code>-komennolla annetaan parametrina naytto, johon viiva piirretään, piirrettävän viivan väri punaisen, sinisen ja vihreän yhdistelmänä, viivan alkupisteen x- ja y-koordinaatit, sekä viivan loppupisteen x- ja y-koordinaatit.</P>
+
+<p>Näiden lisäksi tarvitaan komento <code>pygame.display.flip</code>, joka näyttää juuri piirretyt asiat näytöllä.</p>
+
+<p>Ohjelman suoritus näyttää seuraavalta:</p>
+
+</br></br>
+ <img src="assets/img/piirtaminen.png" width="500"/> </br>
+
+
+ <h2>Osa 2: Rasti </h2>
+Tee ohjelma joka piirtää seuraavanlaisen kuvion. Väreinä siis sininen ja vihreä.
+
+</br></br>
+ <img src="assets/img/raksi.png" width="500"/> </br>
+
+
+ <h2>Osa 2: Laatikko</h2>
+
+ <p>Seuraava koodi näyttää ikkunan, jossa on punainen laatikko:</p>
+
+ <pre class="sh_python">
+import pygame
+
+naytto = pygame.display.set_mode((640, 400))
+pygame.display.set_caption("Piirtäminen")
+
+def main():
+    while True:
+        tapahtuma = pygame.event.poll()
+        if tapahtuma.type == pygame.QUIT:
+            break
+
+        naytto.fill((0, 0, 0))
+        pygame.draw.rect(naytto, (255, 0, 0), (100, 50, 150, 200))
+        pygame.display.flip()
+
+main()
+ </pre>
+
+ <p>Tässä komento <code>pygame.draw.rect</code> piirtää laatikon. Komennon
+ käyttötapa on seuraava:</p>
+
+ <pre>
+ pygame.draw.rect(naytto, (red, green, blue), (alkux, alkuy, leveys, korkeus))
+ </pre>
+
+ <p>Ohjelman suoritus näyttää seuraavalta:</p>
+
+</br>
+ <img src="assets/img/laatikko.png" width="500"/> </br>
+
+ <h2>Osa 2: Ympyrä</h2>
+
+<p>Seuraava koodi näyttää ikkunan, jossa on keltainen ympyrä:</p>
+
+<pre class="sh_python">
+import pygame
+
+naytto = pygame.display.set_mode((640, 400))
+pygame.display.set_caption("Piirtäminen")
+
+def main():
+    while True:
+        tapahtuma = pygame.event.poll()
+        if tapahtuma.type == pygame.QUIT:
+            break
+
+        naytto.fill((0, 0, 0))
+        pygame.draw.circle(naytto, (255, 255, 0), (350, 150), 40)
+        pygame.display.flip()
+
+main()
+</pre>
+
+<p>Tässä komento <code>pygame.draw.circle</code> piirtää ympyrän. Komennon
+käyttötapa on seuraava:</p>
+
+<pre>
+pygame.draw.circle(naytto, (red, green, blue), (keski-x, keski-y), säde)
+</pre>
+
+<p>Ohjelman suoritus näyttää seuraavalta:</p>
+
+</br>
+ <img src="assets/img/ympyra.png" width="500"/> </br>
+
+ <h2>Osa 2: Kuvan piirtäminen </h2>
+
+ Seuraava koodi näyttää ikkunan, jossa on Scratchista tuttu kissa (kuva Wikimedia Commons). Kuva on cat.png -tiedostossa,
+ ja kuvatiedosto on ja tulee olla <i> samassa kansiossa kooditiedoston kanssa</i>. Vain siten koodi löytää kuvatiedoston.
+
+<pre>
+
+import pygame
+
+naytto = pygame.display.set_mode((640, 400))
+pygame.display.set_caption("Piirtäminen")
+x = 100
+y = 200
+
+def main():
+    while True:
+        tapahtuma = pygame.event.poll()
+        if tapahtuma.type == pygame.QUIT:
+            break
+
+        naytto.fill((0, 0, 0))
+        kuva = pygame.image.load("cat.png").convert()
+        naytto.blit(kuva, (x, y))
+        pygame.display.flip()
+
+main()
+</pre>
+
+</br> Lopputulos näyttää tältä: </br>
+
+</br>
+ <img src="assets/img/kissanaytolla.png" width="500"/> </br>
+
+ <h2>Osa 2: Oma pelihahmo </h2>
+ Piirrä oma pelihahmo ja sijoita se ruudulle kohtaan x = 400, y = 400. Käytä hieman aikaa hahmon piirtämiseen,
+ sillä tulet tarvitsemaan hahmoa myöhemmin peliohjelmointia harjoitellessa.
+
+ <h2>Osa 2: Kuvan piirtävä funktio </h2>
+ Tee funktio <code>piirraKuva</code>, joka ottaa parametrina kuvatiedoston nimen merkkijonona, x-koordinaatin sekä y-koordinaatin,
+ ja piirtää kuvan annettujen tietojen mukaan.
+
+ <h2>Osa 2: Hahmo satunnaiseen sijaintiin </h2>
+ Tee ohjelma, joka sijoittaa hahmon satunnaiseen sijaintiin kentälle piirtämälläsi kuvalla. Ohjelman tulee käyttää edellisen tehtävän
+ <code> piirraKuva </code> -funktiota. Laske hahmon sijainti uudelleen jokaisella <code> while True</code> -silmukan suorituskerralla.
+ Lopputuloksesta huomaat kuinka näyttää siltä että hahmo "liikkuu" paikasta toiseen.
+<h2>Osa 3: koodin jäsentäminen </h2>
+Ohjelmoi kaikki osan 3 osat samaan Python tiedostoon ja tallenna versionhallintaan. 
+<br><br>
+ 
+<code> piirraKuva </code> -funktio ei vielä riitä, että voisimme siirtyä seuraavaan vaiheeseen eli kontrollien ottamiseen mukaan
+peliimme. Jäsennellään nyt koodia niin, että piirtäminen ja kontrollit tapahtuvat kokonaan eri funktioissa. Kopioi allaoleva koodi itsellesi seuraavan vaiheen pohjaksi, mutta vaihda kuvatiedostonimen tilalle oman hahmosi tiedostonimi.
+<code> piirtaminen</code>  -funktio ottaa parametrina muuttujat <code> naytto </code>
+ja <code> hahmot</code>. <code> hahmot </code> taas on lista, joka sisältää listan <code>["cat.png", 100, 100, True]</code>. Listan ensimmäinen alkio
+on kuvatiedoston nimi, toinen alkio x-koordinaatti ja kolmas alkio y-koordinaatti. Neljännen alkion on tarkoitus olla aina joko <code> True </code> tai <code> False </code> sen mukaan, piirretäänkö
+hahmo vai ei. </br> </br>
+
+<code> piirtaminen </code> -funktiossa käydään läpi jokainen <code> hahmot </code> -listan lista. Tässä tapauksessa <code> for hahmo in hahmot </code> -
+silmukan sisällölle tulee vain yksi toistokerta koska <code> hahmot </code> -lista sisältää vain yhden hahmon. Mikäli hahmolistan neljäs alkio on <code>True</code>,
+hahmo piirretään.
+
+</br> </br>
+<code> kontrolli </code> -funktiota kutsutaan pelin pääsilmukassa eli <code> while True </code> -lohkossa, mutta tällä hetkellä <section>
+  tulostaa vain "Kontrolli".  </br></br>
+
+</section>
+
+<pre>
+import pygame
+
+naytto = pygame.display.set_mode((640, 400))
+pygame.display.set_caption("Piirtäminen")
+
+
+def piirraKuva(kuvatiedosto, x, y):
+    naytto.blit(kuvatiedosto, (x, y))
+
+def piirtaminen(naytto, hahmot):
+    naytto.fill((0, 0, 0))
+    for hahmo in hahmot:
+        if hahmo[3] == True:
+            kuva = pygame.image.load(hahmo[0]).convert()
+            naytto.blit(kuva, (hahmo[1], hahmo[2]))
+    pygame.display.flip()
+
+def kontrolli(hahmot, tapahtuma):
+    print("Kontrolli")
+
+def main():
+    kissahahmo = ["cat.png", 100, 100, True]
+    hahmot = [kissahahmo]
+    while True:
+        tapahtuma = pygame.event.poll()
+        if tapahtuma.type == pygame.QUIT:
+            break
+        kontrolli(hahmot, tapahtuma)
+        piirtaminen(naytto, hahmot)
+
+
+main()
+</pre>
+
+<h2>Osa 3: Kontrolli </h2>
+ Seuraavaksi toteutamme toiminnallisuuden, jolla pelihahmo ilmestyy näytölle vasta kun painetaan välilyöntiä. Kopioi seuraava koodi, mutta lue se tarkasti, sillä seuraavassa tehtävässä sinulla pitää olla ymmärrystä mitä kontrollikoodi tekee.
+
+</br></br>
+<pre id="kontrolli">
+import pygame
+
+naytto = pygame.display.set_mode((640, 400))
+pygame.display.set_caption("Piirtäminen")
+
+
+def piirraKuva(kuvatiedosto, x, y):
+    naytto.blit(kuvatiedosto, (x, y))
+
+def piirtaminen(naytto, hahmot):
+    naytto.fill((0, 0, 0))
+    for hahmo in hahmot:
+        if hahmo[3] == True:
+            kuva = pygame.image.load(hahmo[0]).convert()
+            naytto.blit(kuva, (hahmo[1], hahmo[2]))
+    pygame.display.flip()
+
+def kontrolli(hahmot, tapahtuma):
+    if tapahtuma.type == pygame.KEYDOWN:
+        if tapahtuma.key == pygame.K_SPACE:
+            hahmot[0][3] = True
+
+def main():
+    kissahahmo = ["cat.png", 100, 100, False]
+    hahmot = [kissahahmo]
+    while True:
+        tapahtuma = pygame.event.poll()
+        if tapahtuma.type == pygame.QUIT:
+            break
+        kontrolli(hahmot, tapahtuma)
+        piirtaminen(naytto, hahmot)
+
+
+main()
+</pre>
+
+<h2>Osa 3: Kaksi hahmoa </h2>
+Piirrä toinen hahmo ja lisää sen piirtäminen haluamaasi sijaintiin koodiisi. Ohjelman tulee toimia niin, että alussa
+näyttö on musta, ja kun painetaan välilyöntiä niin molemmat hahmot ilmestyvät näytölle.
+
+</br> </br>
+Vinkkejä: Sinun täytyy ensin muokata <code>main</code> -funktion <code> hahmot </code> -listaa siten että se sisältää
+myös toiselle hahmolle oman listaelementin. Jos et ole varma mitä hahmot -listasi sisältää ohjelman suorituksessa, kannattaa esimerkiksi
+tulostaa se <code> print(hahmot)</code> -koodilla ennen pelin pääsilmukkaa eli <code> while True</code> -toistolausetta. Kun hahmot-listalla
+on oikea sisältö, myös <code> kontrolli </code> -funktio vaatii muokkausta siten että <i> kaikkien </i> hahmot-listan listaelementtien viimeinen arvo
+asetetaan True:ksi.
+
+<h2>Osa 3: Erilaisia näppäimiä </h2>
+Pysähdytään tutkimaan riviä </br></br>
+<pre> if tapahtuma.key == pygame.K_SPACE </pre>
+</br>
+
+<code>tapahtuma.key</code> kertoo, mitä näppäintä käyttäjä painoi. <code> pygame.K_SPACE </code> taas on välilyöntinäppäimen koodi.
+Ehto siis tarkistaa, onko käyttäjän painama näppäin välilyöntinäppäin. Seuraavassa taulukossa on koodeja yleisimmille pelien kontrolleihin
+tarvittaville näppäimille.
+
+<table border="1" style="margin-top: 20px;">
+  <tr>
+    <th>Pygame-koodi</th>
+    <th>näppäin</th>
+  </tr>
+  <tr>
+    <td> K_SPACE  </td>
+    <td> välilyönti </td>
+  </tr>
+  <tr>
+    <td> K_RIGHT </td>
+    <td> oikea nuolinäppäin </td>
+  </tr>
+  <tr>
+    <td> K_LEFT </td>
+    <td> vasen nuolinäppäin </td>
+  </tr>
+  <tr>
+    <td> K_DOWN </td>
+    <td> alaspäin -nuolinäppäin </td>
+  </tr>
+  <tr>
+    <td> K_UP </td>
+    <td> ylöspäin -nuolinäppäin </td>
+  </tr>
+  <tr>
+    <td> K_ESCAPE </td>
+    <td> esc  </td>
+  </tr>
+  <tr>
+    <td> K_0 </td>
+    <td> Numeronäppäin 0. Muut numeronäppäinkoodit ovat samaa muotoa K_numero, eli esimerkiksi K_5. </td>
+  </tr>
+  <tr>
+    <td> K_a </td>
+    <td> Kirjainnäppäin a. Muut kirjainnäppäinkoodit ovat samaamuotoa K_kirjain, eli esimerkiksi K_b. </td>
+  </tr>
+</table>
+
+<h2>Osa 3: Päähahmo liikkumaan nuolinäppäimillä </h2>
+Tästä lähtien pelisi päähahmo, tai päähenkilö, on <code> hahmot </code> -listan ensimmäinen hahmo. Tehtävänäsi on toteuttaa
+tälle hahmolle nuolinäppäimillä liikkuminen. Se toteutetaan niin, että <code> kontrolli </code> -funktioon lisätään ehtoja
+eri näppäimille. Seuraavassa koodissa <code> kontrolli </code> -funktioon on lisätty <code> elif </code> -lohko, jossa
+otetaan hahmot-listasta ensimmäinen alkio ja tallennetaan se muuttujaan <code> päähahmo </code>. Päähahmon x-koordinaattia
+kasvatetaan 10:llä. </br></br>
+
+Toteuta <code> kontrolli </code> -funktioosi muut elif-lohkot muille nuolinäppäimille ja testaa että ohjelmasi toimii.
+Vinkki: Hahmo liikkuu oikealle, kun x-koordinaatti kasvaa. Hahmo liikkuu alaspäin, kun y-koordinaatti kasvaa.
+</br></br>
+<pre>
+def kontrolli(hahmot, tapahtuma):
+    if tapahtuma.type == pygame.KEYDOWN:
+        if tapahtuma.key == pygame.K_SPACE:
+            for hahmo in hahmot:
+                hahmo[3] = True
+        elif tapahtuma.key == pygame.K_RIGHT:
+            päähahmo = hahmot[0]
+            päähahmo[1] += 10
+</pre>
+
+<h2>Osa 3: Hahmon liikkumisen rajaus näytölle </h2>
+Kokeile liikuttaa hahmoa ikkunan rajojen yli pois näkyvistä. Ei ole hyvä että hahmo voi liikkua ikkunan rajojen ulkopuolelle,
+joten tehtävänä on nyt koodata tarkistukset, joiden avulla ei ole mahdollista että hahmo liikkuu ikkunan ulkopuolelle.
+
+</br> </br>
+Vinkki: Tarvitset tarkistuksissa sekä koko näytön pituutta sekä leveyttä. Kuvan sijainti määrittyy Pygamessa kuvan vasemman yläkulman mukaan.
+Siispä tulet huomaamaan, että jos esimerkiksi pienimpänä mahdollisena x-koordinaattina 0 ja suurimpana mahdollisena x-koordinaattina 640 (eli näytön leveys),
+vasemmalle mentäessä hahmo pysähtyy näkyviin näytölle ja oikealle mennessä se menee näytön yli ja pysähtyy vasta ikkunan ulkopuolelle. Tämä ei kuitenkaan
+haittaa kunhan hahmo pysähtyy. Muista käyttää x-koordinaattien tarkistuksessa näytön leveyttä ja y-koordinaattien tarkistuksessa näytön korkeutta.
+
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!--END HOMEPAGE SECTION-->
+
+     <!-- END FOOTER SECTION-->
+     <!-- SCROLLUP LINK SECTION-->
+    <a href="#Homepage" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+     <!--END SCROLLUP LINK SECTION-->
+    <!-- STYLE SWITCHER SECTION-->
+    <!--div  class="panel" style="color:white">
+        <div id="styledemo"  style="left: 0px;">
+		<span id="theme_blue" style="background-color:#37AFFF" ></span>
+		<span id="theme_green" style="background-color:#469E66" ></span>
+		<span id="theme_brown" style="background-color:#E69351" ></span>
+		<span id="theme_red" style="background-color:#E7484E" ></span>
+            </div>
+</div-->
+    <!-- END STYLE SWITCHER SECTION-->
+    <!-- MAIN SCRIPTS SECTION-->
+    <script src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/scrollReveal.js"></script>
+    <script>
+        window.scrollReveal = new scrollReveal(); //please put this script here to show animation at the time of scroll
+    </script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+     <!--END MAIN SCRIPTS SECTION-->
+</body>
+
+    <!--END  BODY SECTION-->
+</html>

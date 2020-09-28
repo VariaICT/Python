@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+      <!-- HEAD SECTION-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- MAIN STYLE SECTION-->
+    <link href="assets/plugins/isotope/isotope.css" rel="stylesheet" media="screen" />
+    <link href="assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/plugins/IconHoverEffects-master/css/component.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/about-achivements.css" rel="stylesheet" />
+    <link id="mainStyle" href="assets/css/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <!-- END MAIN STYLE SECTION-->
+</head>
+<!-- END HEAD SECTION-->
+
+     <!-- BODY SECTION-->
+<body>
+
+     <!-- HEADER SECTION-->
+    <div class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="fa fa-bars mobile-bars"></span>
+                </button>
+            </div-->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="index.html">Home</a></li><!-- menu links-->
+                    <!--li><a href="perusasiat.html">Perusasiat</a></li>
+                    <li><a href="rakenteita.html">Lisää rakenteita</a></li>
+                    <li><a href="funktiot.html">Funktiot</a></li-->
+                    <li><a href="kohtipelia.html">Kohti peliä</a></li>
+                    <li><a href="pygame.html">Peliohjelmoinnin alkeet</a></li>
+                    <li><a href="vihollispeli.html">Vihollispeli</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+     <!-- END HEADER SECTION-->
+
+    <!--PAGE CONTENT-->
+    <!-- HOMEPAGE SECTION-->
+
+    <section id="Homepage">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <div class="align-left">
+                        <h2 class="main-text">KOHTI PELIÄ</h2>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section style="margin-top:20px;">
+        <div class="container">
+            <div class="row">
+              <div class="">
+                  Tässä osiossa opetellaan toteuttamaan joitakin peleissä tärkeitä asioita Pythonilla.
+
+                  <h2> Satunnaisuus </h2>
+
+                Nyt opetellaan Pythonilla satunnaisluvun generoiminen valmista funktiota apuna käyttäen.
+                Ensin Pythonissa tarvitaan random -kirjastoa. Se tuodaan ohjelmaan import random -käskyllä. random.randint(1, 10)
+                arpoo satunnaisluvun väliltä 1..10.
+
+  </br>  </br>
+<pre>
+import random
+
+print(random.randint(1, 10))
+</pre>
+
+
+<h2>Tehtävä 39: Nopan heittäminen</h2>
+
+<p>Tee ohjelma, joka heittää noppaa ja ilmoittaa silmäluvun.</p>
+
+<p>Ohjelman mahdollisia tulostuksia ovat esimerkiksi seuraavat:</p>
+
+<pre>
+Silmäluku: 3
+</pre>
+
+<pre>
+Silmäluku: 5
+</pre>
+
+<h2>Tehtävä 40: Kolikon heittäminen</h2>
+
+<p>Tee ohjelma, joka heittää kolikkoa ja ilmoittaa tuloksen (kruuna tai klaava).</p>
+
+<p>Ohjelman mahdolliset tulostukset ovat seuraavat:</p>
+
+<pre>
+Tulos: kruuna
+</pre>
+
+<pre>
+Tulos: klaava
+</pre>
+
+<h2>Tehtävä 41: Salasanan arpoja</h2>
+
+<p>Tee ohjelma, joka arpoo käyttäjälle salasanan.
+Salasana muodostuu merkeistä a-z ja siinä on 8 merkkiä.</p>
+
+<p>Ohjelman tulostuksia ovat esimerkiksi seuraavat:</p>
+
+<pre>
+Salasana: zitbfsnt
+</pre>
+
+<pre>
+Salasana: wlprcusq
+</pre>
+
+<h2>Tehtävä 42: Sekoittaja</h2>
+
+<p>Tee ohjelma, joka sekoittaa listan sisällön.
+Sovella ohjelmassa satunnaisuutta haluamallasi tavalla.</p>
+
+<p>Ohjelman runko on seuraava:</p>
+
+<pre class="sh_python">
+luvut = [1, 2, 3, 4, 5, 6, 7, 8]
+sekoitaLista(luvut)
+tulostaLista(luvut)
+</pre>
+
+<h2> Tehtävä 43: Vihollisen sijainnit</h2>
+Tee ohjelma, joka luo listan nimeltään vihollisenSijainnit ja arpoo 1000 kappaletta vihollisen sijainteja lisäten ne listaan.
+Vihollisen sijainti on merkkijonopari x,y. Esimerkiksi "5,16" on kelpo vihollisen sijainti. Sekä x- että y-koordinaatit voivat
+olla väliltä 0-100. Tulosta lopuksi lista jotta näet mitä se sisältää.
+
+</br></br>
+Vinkki: Muistathan että merkkijonoja yhdistetään plusmerkillä.
+
+<pre>
+merkkijono = "a"
+merkkijono += "bc"
+print(merkkijono)  #tulostuu abc
+</pre>
+
+<h2> Listan järjestäminen </h2>
+
+Saatat tarvita peliä tehdessä listan järjestämistä esimerkiksi pisteiden tai etäisyyksien suuruusjärjestykseen laittamisessa. Seuraavassa esimerkissä
+määritellään, järjestetään lista valmista funktiota kutsumalla ja tulostetaan se. Jos olet kiinnostunut tarkemmin siitä miten järjestäminen toimii
+sort -funktion sisällä, googlaa esimerkiksi kuplalajittelu (bubble sort) tai lomituslajittelu (merge sort).
+</br></br>
+<pre>
+lista = [1, 3, 5, 4]
+lista.sort()
+print(lista) #tulostuu [1, 3, 4, 5]
+</pre>
+
+<h2> Tehtävä 44: Pistelista</h2>
+Tee ohjelma, joka kysyy käyttäjältä pelaajan nimen ja pisteet ja jatkaa tätä, kunnes käyttäjä antaa syötteen "lopeta" pelaajaa kysyttäessä. Tämän jälkeen
+tulostetaan parhaat pisteet ja niiden pelaaja.
+
+</br></br>
+<pre>
+Anna pelaaja: Pihla
+Anna pisteet: 50
+Anna pelaaja: Ada
+Anna pisteet: 65
+Anna pelaaja: lopeta
+
+Pihla, 50
+
+</pre>
+
+
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!--END HOMEPAGE SECTION-->
+
+     <!-- END FOOTER SECTION-->
+     <!-- SCROLLUP LINK SECTION-->
+    <a href="#Homepage" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+     <!--END SCROLLUP LINK SECTION-->
+    <!-- MAIN SCRIPTS SECTION-->
+    <script src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/scrollReveal.js"></script>
+    <script>
+        window.scrollReveal = new scrollReveal(); //please put this script here to show animation at the time of scroll
+    </script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+     <!--END MAIN SCRIPTS SECTION-->
+</body>
+
+    <!--END  BODY SECTION-->
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!-- HEAD SECTION-->
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- MAIN STYLE SECTION-->
+  <link href="assets/plugins/isotope/isotope.css" rel="stylesheet" media="screen" />
+  <link href="assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" />
+  <link href="assets/plugins/IconHoverEffects-master/css/component.css" rel="stylesheet" />
+  <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/about-achivements.css" rel="stylesheet" />
+  <link id="mainStyle" href="assets/css/style.css" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <!-- END MAIN STYLE SECTION-->
+</head>
+<!-- END HEAD SECTION-->
+
+<!-- BODY SECTION-->
+
+<body>
+
+  <!-- HEADER SECTION-->
+  <div class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="fa fa-bars mobile-bars"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="index.html">Home</a></li><!-- menu links-->
+          <li><a href="perusasiat.html">Perusasiat</a></li>
+          <li><a href="rakenteita.html">Lisää rakenteita</a></li>
+          <li><a href="funktiot.html">Funktiot</a></li>
+          <li><a href="kohtipelia.html">Kohti peliä</a></li>
+          <li><a href="pygame.html">Peliohjelmoinnin alkeet</a></li>
+          <li><a href="vihollispeli.html">Vihollispeli</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!-- END HEADER SECTION-->
+
+  <!--PAGE CONTENT-->
+  <!-- HOMEPAGE SECTION-->
+
+  <section id="Homepage">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+          <div class="align-center">
+            <h2 class="main-text">LISÄÄ RAKENTEITA</h2>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <section style="margin-top:20px;">
+    <div class="container">
+      <div class="row">
+        <div class="">
+          <h2> Lista </h2>
+
+          Lista on tietorakenne, johon voidaan tallentaa useita elementtejä. Elementti on listan osa, ja jokaiselle
+          elementille voidaan nimetä sijainti kokonaislukuna. Pythonissa listan ensimmäisen elementin sijainti on 0.
+          Listan elementit voidaan käydä läpi, ja listalla on koko.
+
+          </br></br>
+          <img src="assets/img/scratch_lista.png" alt="Scratch lista" /></br></br>
+
+          Pythonissa tyhjä lista alustetaan koodilla </br></br>
+          <code> lista = []</code> </br></br>
+
+          </br>
+          Lista-nimisen listan voi myös tulostaa:
+
+          </br></br>
+          <code> print(lista) </code> </br></br>
+
+          Lista voi sisältää erilaisia elementtejä, seuraava koodi alustaa listan elementeillä "elementti" ja 9000 ja
+          tulostaa sen.
+
+          </br></br> <img src="assets/img/erilaisiaelementteja.png" alt="lista = [" elementti", 9000] &#10;
+            print(lista)" />
+
+          <br>
+
+          <h2 id="lista"> Tehtävä 17: Listan läpikäynti </h2>
+
+          <b style="color:red"> Lue allaoleva teksti ja kopioi esimerkki
+            listan läpikäynnistä. Testaa ohjelmaa.
+            </br> </br>
+
+          Lista voidaan käydä läpi for-silmukalla. For-silmukkaa voidaan käyttää useisiin tarkoituksiin ja listan
+          läpikäynti on vain yksi niistä.
+          Seuraava koodi alustaa listan, ja tulostaa jokaisen sen elementin järjestyksessä ensimmäisestä viimeiseen.
+
+          </br></br> <img src="assets/img/listanlapikaynti.png" alt="lista = [" elementti", 9000] &#10; for muuttuja in
+            lista: &#10; &emsp; print(muuttuja)" />
+
+          <br>
+
+          Tulostus näyttää siis tältä:
+
+          </br></br> <img src="assets/img/listanlapikayntitulostus.png" alt="elementti &#10; 9000" />
+
+          <br>
+
+          <h2> Esimerkki: Onko käyttäjän antama luku listassa </h2>
+          Seuraava esimerkki kertoo käyttäjälle, onko häneltä kysytty luku listassa. <code> löytyyListasta </code>
+          -totuusarvomuuttujaa
+          käytetään apuna, jotta voidaan lopussa kertoa jos lukua ei löytynyt listasta. Kokeile esimerkkiä. </br></br>
+          <pre>
+lista = [5, 4, 1, 8]
+luku = int(input("Anna luku josta haluat tietää onko se listassa: "))
+löytyyListasta = False
+
+for muuttuja in lista:
+  if muuttuja == luku:
+      print("Luku on listassa!")
+      löytyyListasta = True
+
+if löytyyListasta == False:
+  print("Ei löytynyt listasta.")
+</pre>
+
+          <h2> Tehtävä 18: Listan lukujen summa </h2>
+          Tehtävänäsi on määritellä lista </br></br>
+          <code> lista = [1, 2, 3, 4, 5] </code> </br></br> ja laskea ohjelmallisesti lukujen summa. Sinun täytyy siis
+          alussa
+          alustaa muuttuja <i>summa</i> nollaksi. Vinkki: samaan muuttujaan voi sijoittaa uudelleen luvun, esimerkiksi
+          tyyliin
+
+          </br></br>
+          <code> summa = summa + muuttuja </code> </br></br>
+
+          Tulosta lopussa listan lukujen summa, vastauksen pitäisi olla 15.
+
+          <h2> Tehtävä 19: Listan pienin luku</h2>
+          Tehtävänäsi on määritellä lista </br></br>
+          <code> lista = [5, 4, 3, 1, 7] </code> </br> </br>
+          ja etsiä ohjelmallisesti listan pienin alkio sekä tulostaa se.
+
+          </br>
+          Vinkki: Määrittele ohjelman alkuun muuttuja <i> pienin </i>, jolle annat alkuarvoksi listan ensimmäisen alkion
+          seuraavalla koodilla:
+          </br> </br> <code> pienin = lista[0] </code>. Tämän jälkeen listaa läpikäydessä vertaa listan vuorossaolevaa
+          alkiota apumuuttujaan,
+          ja muuta apumuuttujan arvoa jos se on tarpeen.
+
+          <h2> Tehtävä 20: Listan suurin luku</h2>
+          Tehtävänäsi on määritellä sama lista kuin edellisessäkin tehtävässä, </br></br>
+          <code> lista = [5, 4, 3, 1, 7] </code> </br> </br>
+          ja etsiä ohjelmallisesti listan suurin alkio sekä tulostaa se.
+
+
+          <h2> Kommentit </h2>
+          Tästä lähtien esimerkkikoodeissa on <i> kommentteja </i>. Kommentin tunnistaa alkavaksi #-merkistä, ja
+          kommenttimerkin jälkeen
+          samalla rivillä olevaa tekstiä ei suoriteta ohjelmassa. Kommentit ovat hyödyllisiä ohjelman rakenteen
+          selittämisessä lukijalle. Testaa seuraavaa riviä:
+          </br></br>
+          <pre>
+print("Hei maailma") #Tämä on kommentti eikä sitä suoriteta
+</pre>
+          <h2> Toiston alkeet </h2>
+
+          <p>Huomaamme usein ohjelmakoodissamme tilanteita missä sama asia toistuu usein. Esimerkiksi, jos haluamme
+            tulostaa luvut yhdestä kymmeneen, on yksi -- kohta onneksi turha -- ratkaisu kirjoittaa jokainen käsky
+            erikseen.</p>
+
+          <pre class="sh_python">
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print(6)
+print(7)
+print(8)
+print(9)
+print(10)
+</pre>
+          <p>Entä jos haluaisimme tulostaa kaikki luvut yhdestä sataan, tai vaikka luvut yhdestä käyttäjän antamaan
+            syötteeseen asti? Tällaisissa tapauksissa käytetään <em>toistorakenteita</em>. Toistorakenteiden avulla
+            voidaan toteuttaa toistuvia käskyjä.
+            Toistorakenteet näyttävät Pythonissa erilaisilta kuin Scratchissa, mutta perusidea on molemmissa sama,
+            asioiden toistaminen. </p>
+
+          <h3>while</h3>
+
+          <p>Komento <code>while</code> toistaa lohkonsa koodia niin kauan kun määritelty ehto on voimassa. Komennon
+            <code>while</code> ehto-osa toimii kuten <code>if</code>:ssä.</p>
+
+          <p>Kuten kaikki lohkot, <code>while</code>:n lohko alkaa kaksoispisteellä. Lohkossa oleva koodi on
+            sisennettyä, ja lohko päättyy sisennyksen loppumiseen.</p>
+
+          <p>Seuraavassa esimerkissä tulostetaan luvut 1,2,..,9,10. Kun <code>luku</code>-muuttuja saa arvokseen yli 10,
+            <code>while</code>-ehto ei ole enää voimassa ja toistaminen lopetetaan.</p>
+
+          <pre class="sh_python">
+luku = 1;
+
+while luku &lt; 11:
+  print(luku)
+  luku = luku + 1
+</pre>
+
+          <pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre>
+          <p>Lue ylläoleva "niin pitkään kuin luku on pienempi kuin 11, tulosta luku ja kasvata lukua yhdellä".</p>
+
+          <p>Ylläolevassa koodissa ehto-lausessa olevaa muuttujaa <code>luku</code> kasvatettiin jokaisella kierroksella
+            yhdellä. Päivitysehto voi olla mikä tahansa.</p>
+
+          <pre class="sh_python">
+luku = 1024
+
+while luku &gt;= 1:
+  print(luku)
+  luku /= 2; # luku = luku / 2
+</pre>
+
+
+
+          <h3> while True </h3>
+          Seuraava koodinpätkä tulostaa ikuisesti
+          merkkijonon "Ikuisesti". While True siis toistaa sisältöään niin pitkään kunnes se saa käskyn lopettaa, jonka
+          opimme myöhemmin.
+
+          </br></br> <img src="assets/img/ikuisesti.png" alt="while True: &#10; &emsp; print('Ikuisesti')" />
+
+          <h2> Tehtävä 21: Käyttäjältä luvun kysyminen ikuisesti </h2>
+          Tee ohjelma, joka kysyy käyttäjältä ikuisesti lukuja ja ylläpitää niiden summaa muuttujassa <i> summa </i>.
+
+          <h2> Silmukan suorituksen lopetus: break </h2>
+          While True -toistolauseen suoritus loppuu komennolla
+
+          </br></br>
+          <code> break </code> </br></br>
+
+          Komennon voi sijoittaa esimerkiksi if-ehdon sisälle silmukan sisälle, esimerkiksi seuraavaan tyyliin.
+          </br></br>
+          <pre>
+if luku == 0:
+    break
+</pre>
+
+          <h2> Tehtävä 22: Lukujen kysymisen lopettaminen käyttäjän pyyntöön </h2>
+          Paranna edellistä ohjelmaasi siten, että lukujen kysyminen lopetetaan kun käyttäjä syöttää luvun 0. Tällöin
+          käyttäjälle tulostetaan myös summa. Tarvitset tähän if-ehtolausetta
+          sekä break-komentoa.
+
+          <h2 class="problem"> Ongelma: Käyttäjä syöttää tekstiä kun kysytään lukua</h2>
+
+          Kokeile syöttää edellisen tehtävän ohjelmaasi tekstiä luvun sijaan. Mitä tapahtuu? Korjaus ongelmaan on kysyä
+          käyttäjältä <i> merkkijonoa </i>, ja
+          muuntaa se sen jälkeen luvuksi, jos se on luku. Seuraava koodi kysyy käyttäjältä syötettä merkkijonona.
+          syöte.isnumeric() tarkistaa, onko syöte mahdollista muuttaa luvuksi.
+          isnumeric() -käsky palauttaa totuusarvona tiedon, onko muuttuja jolle sitä kutsuttiin, mahdollista muuttaa
+          luvuksi vai ei. Jos syöte on luku, int(syöte) muuntaa syötteen luvuksi.
+
+          </br> </br>
+          <code>
+           syöte = input("Anna syöte: ")
+         </br> if syöte.isnumeric():
+        </br> &emsp; &emsp;syöte = int(syöte)
+          </br> print(syöte)
+
+         </code> </br> </br>
+          <h2> int(muuttuja) vs str(muuttuja) </h2>
+
+          int(muuttuja) muuttaa muuttujan luvuksi, kun taas str(muuttuja) muuttaa muuttujan merkkijonoksi. Str-kutsu on
+          usein tarpeellinen, kun
+          halutaan tulostaa luku ja merkkijono samaan aikaan. Tällöin luku pitää muuttaa tulostuksessa merkkijonoksi
+          str-kutsulla. Esimerkiksi seuraava koodi
+          tulostaa luvun ja merkkijonon samalle riville. </br></br>
+
+          <pre>
+muuttuja = 9000
+print("Muuttujan muuttuja arvo on: " + str(muuttuja))
+</pre>
+
+          <h2> Tehtävä 23: Lopetuskäskyksi merkkijono </h2>
+          Muuta ylläolevaa koodia apuna käyttäen tehtävän 3 ohjelmasi hyväksymään lopetussyötteenä sekä 0 että
+          merkkijono "lopeta".
+
+
+
+          <h2>Tehtävä 24 : Sadasta yhteen</h2>
+
+          <p>Tee ohjelma, joka tulostaa kokonaisluvut väliltä 100&ndash;1.</p>
+
+          <p>Ohjelman tulostus on seuraava:</p>
+
+          <pre>
+100
+99
+98
+(välissä paljon rivejä)
+3
+2
+1
+</pre>
+
+          <h2>Tehtävä 25: Parilliset luvut</h2>
+
+          <p>Tee ohjelma, joka tulostaa parilliset kokonaisluvut väliltä 2&ndash;100.</p>
+
+          <pre>
+2
+4
+6
+(välissä paljon rivejä)
+96
+98
+100
+</pre>
+
+
+          <h2>Tehtävä 26: Lukuun asti</h2>
+
+          <p>Kirjoita ohjelma, joka tulostaa kokonaisluvut 1:stä käyttäjän antamaan lukuun asti.</p>
+
+          <pre>
+Mihin asti? <font color="red">3</font>
+1
+2
+3
+</pre>
+
+          <pre>
+Mihin asti? <font color="red">5</font>
+1
+2
+3
+4
+5
+</pre>
+
+          <h2>For</h2>
+
+          Tämän osion alussa kävimme for-silmukalla kaikki listan elementit läpi. For on kuitenkin paljon
+          monikäyttöisempi rakenne, ja nyt tutustumme sen muihin käyttötapoihin.
+
+          <p>Seuraavassa esimerkissä aloitamme laskemisen 0:sta ja toistamme <code>while</code>-toistolausekkeen lohkoa,
+            kunnes olemme lukeneet käyttäjältä kolme lukua, jolloin ehto ei ole enää voimassa.</p>
+
+          <pre class="sh_python">
+print("Anna kolme lukua ja kerron niiden summan")
+
+luettu = 0
+summa = 0
+
+while luettu < 3:
+    luku = int(input("Anna luku: "))
+
+    summa = summa + luku   # tai summa += luku;
+    luettu += 1            # tai luettu = luettu + 1;
+
+
+print("Lukujen summa on: " + str(summa))
+</pre>
+
+          <p>Tiedämme usein jo etukäteen kuinka monta kertaa tahdomme suorittaa toistolausekkeen lohkon. Edellisessä
+            esimerkissä suoritimme lohkon 3 kertaa. Tämän voi ilmaista myös käyttämällä <em>for</em>-toistolausetta
+            seuraavalla tavalla.</p>
+
+          <pre class="sh_python">
+print("Anna kolme lukua ja kerron niiden summan")
+
+summa = 0
+
+for i in range(3): # i in range(3) tarkoittaa käydään luvut 0, 1, 2 yksitellen läpi
+    luku = int(input("Anna luku: "))
+    summa = summa + luku   # tai summa += luku;
+
+print("Lukujen summa on: " + str(summa))
+</pre>
+
+          <p>Komento <code>range</code> antaa kaikki luvut nollan ja komennolle range <em>parametrina</em> annetun luvun
+            välillä. Esimerkiksi komento <code>range(10)</code> antaisi luvut <code>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</code>.
+
+            <p>Tässä ei kannata säikähtää yksikirjaimista muuttujaa <em>i</em>. Sen käytöllä on tietojenkäsittelyssä ja
+              ohjelmoinnissa pitkät perinteet.</p>
+
+            <p><em>for</em>-lauseke käy yksitellen <code>range</code>-komennolla saadut luvut läpi. Jokainen luku on
+              vuorollaan muuttujassa <code>i</code>. Muuttujan <code>i</code> arvon voi tulostaa aivan kuten kaikkien
+              muidenkin muuttujien arvon. Esimerkiksi lukujen 1, 2, ... , 10 tulostaminen käy seuraavasti for-lausekkeen
+              avulla.</p>
+
+            <pre class="sh_python">
+for i in range(10): # i in range(10) käy läpi luvut 0, 1, ..., 9
+  print(str(i + 1))
+</pre>
+
+            <pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre>
+
+            <p>Komennolle <code>range</code> voi myös kertoa luvun josta aloitetaan. Ylläolevan tulostuksen saa aikaan
+              myös seuraavasti:</p>
+
+            <pre class="sh_python">
+for i in range(1, 11): # i in range(1, 11) käy läpi luvut 1, 2, ..., 10
+  print(i) # huomaa että pelkkää lukua ei tarvitse muuttaa tekstityyppiseksi tulostettaessa
+</pre>
+
+
+            <p>Käytännössä for on <em>while</em>-lauseen pelkistetympi muoto. Komennolle <code>range</code> voi asettaa
+              myös kolmannen arvon, joka kertoo askeleen koosta. Esimerkiksi komento <code>range(1, 10, 3)</code> käy
+              läpi luvut 1, 4, 7 (luku 10 ei tule mukaan koska toiseksi arvoksi -- eli ylärajaksi -- on asetettu 10).
+            </p>
+
+            <pre class="sh_python">
+print "Tulostetaan joka kolmas luku.";
+
+for i in range(1, 10, 3):
+  print(i)
+</pre>
+
+            <pre>
+Tulostetaan joka kolmas luku.
+1
+4
+7
+</pre>
+
+            <h2> Merkkijonojen liittäminen yhteen </h2>
+
+            Perusasiat -osiossa "Syötteen kysyminen käyttäjältä" -kohdassa kokeiltiin jo tavallaan vahingossa kahden
+            merkkijonon liittämistä yhteen.
+            Se tapahtuu siis + -operaattorilla. Esimerkiksi seuraava ohjelma tulostaisi merkkijonon aaaaa
+            </br></br>
+            <pre>
+aat = ""
+for i in range(5):
+    aat += "a"
+print(aat)
+</pre>
+
+            <h2>Tehtävä 27: Tähtien tulostus</h2>
+
+            <p>Tee ohjelma, joka tulostaa käyttäjän antaman määrän tähtiä.</p>
+
+            <pre>
+Kuinka monta tähteä? <font color="red">5</font>
+*****
+</pre>
+
+            <pre>
+Kuinka monta tähteä? <font color="red">8</font>
+********
+</pre>
+
+            <h2>Tehtävä 28: Suorakulmion tulostus</h2>
+
+            <p>Tee ohjelma, joka tulostaa suorakulmion, jonka leveyden ja korkeuden käyttäjä antaa.</p>
+
+            <p>Vihje: Tee kaksi sisäkkäistä silmukkaa.</p>
+
+            <pre>
+Anna leveys: <font color="red">4</font>
+Anna korkeus: <font color="red">3</font>
+****
+****
+****
+</pre>
+
+            <pre>
+Anna leveys: <font color="red">10</font>
+Anna korkeus: <font color="red">5</font>
+**********
+**********
+**********
+**********
+**********
+</pre>
+
+            <h2>Tehtävä 29: Tyylikäs tulostus</h2>
+
+            <p>Tee ohjelma, joka tulostaa listassa olevat luvut tyylikkäästi.
+              Lukujen väliin tulee pilkku ja välilyönti. Viimeisen luvun jälkeen
+              ei kuitenkaan tule pilkkua.</p>
+
+            <p>Lista määritellään koodin alussa seuraavasti:</p>
+
+            <pre class="sh_python">
+luvut = [5, 1, 3, 4, 2];
+</pre>
+
+            <p>Ohjelman tulostus on seuraava:</p>
+
+            <pre>
+5, 1, 3, 4, 2
+</pre>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--END HOMEPAGE SECTION-->
+
+  <!-- END FOOTER SECTION-->
+  <!-- SCROLLUP LINK SECTION-->
+  <a href="#Homepage" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+  <!--END SCROLLUP LINK SECTION-->
+  <!-- MAIN SCRIPTS SECTION-->
+  <script src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/scrollReveal.js"></script>
+  <script>
+    window.scrollReveal = new scrollReveal(); //please put this script here to show animation at the time of scroll
+  </script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
+  <script src="assets/plugins/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="assets/js/jquery.localscroll-1.2.7-min.js"></script>
+  <script src="assets/js/jquery.appear.js"></script>
+  <script src="assets/scripts/main.js"></script>
+
+  <!--END MAIN SCRIPTS SECTION-->
+</body>
+
+<!--END  BODY SECTION-->
+
+</html>
